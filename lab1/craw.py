@@ -1,7 +1,7 @@
 # encoding:utf-8
 __author__ = 'Zhaozitian'
 
-import nlp.handle
+import Handle
 from tkinter import *
 import tkinter as tk
 import tkinter.messagebox as messagebox
@@ -71,16 +71,16 @@ class Generator(threading.Thread):
 	def run(self):
 		while True:
 			name = gui_que.get()
-			crawler.init(name, int(self.num))
-			tasks = crawler.queue.unfinished_tasks
+			Handle.init(name, int(self.num))
+			tasks = Handle.queue.unfinished_tasks
 			if tasks == 0:
 				self.progress += "done!!!"
 				self.frm_bottom_label.config(text=self.progress)
-			if crawler.cnt == 0:
+			if Handle.cnt == 0:
 				messagebox.showerror('Error', 'Can not download. Please check internet.')
 			else:
 				messagebox.showinfo('Download Succeeded',
-									'Download ' + str(crawler.cnt) + ' blogs' + ',saved in ./blog directory')
+									'Download ' + str(Handle.cnt - 1) + ' blogs, saved in ./blog directory')
 			gui_que.task_done()
 
 def center_window(w=300, h=220):
@@ -94,7 +94,7 @@ def center_window(w=300, h=220):
 
 if __name__ == '__main__':
 	root = tk.Tk()
-	root.title('Csdn_Blog_Download_Tool')
+	root.title('')
 	center_window()
 	t = Generator(root)
 	t.setDaemon(True)
