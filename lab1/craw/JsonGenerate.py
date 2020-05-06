@@ -3,8 +3,6 @@
 __author__ = 'Zhaozitian'
 
 import Handle
-#import Segment
-#import JsonGenerate
 from tkinter import *
 import tkinter as tk
 import tkinter.messagebox as messagebox
@@ -50,7 +48,7 @@ class Generator(threading.Thread):
 
 		self.frm_label_num = tk.Label(self.frm, text='Download Path:', font=('stencil', 11))
 		self.frm_label_num.grid(row=2, column=0, padx=5, pady=10)
-		self.frm_label_num2 = tk.Label(self.frm, text='G:\\news\\', font=('times new roman', 11))
+		self.frm_label_num2 = tk.Label(self.frm, text='.\\news\\', font=('times new roman', 11))
 		self.frm_label_num2.grid(row=2, column=1, padx=5, pady=10)
 
 		self.frm_button_cancel = tk.Button(self.frm, text='       Cancel      ', command=self.root.quit, font=('stencil', 11), background = 'red', foreground = 'white')
@@ -104,7 +102,7 @@ class Generator(threading.Thread):
 			Handle.init(name, int(self.num))
 			tasks = Handle.queue.unfinished_tasks
 			if tasks == 0:
-				self.progress += "done!"
+				self.progress += "done!!!"
 				self.frm_bottom_label.config(text=self.progress)
 			if Handle.cnt == 0:
 				messagebox.showerror('Error', 'Can not download. Please check internet.')

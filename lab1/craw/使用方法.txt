@@ -1,1 +1,1 @@
-打开并运行craw.py即可
+打开并运行craw.py，依次点击download, nlp process, json generate即可.
