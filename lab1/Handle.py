@@ -1,6 +1,6 @@
 #encoding:utf-8
-__author = 'Zhaozitian'
 #written with Akko 3018V2
+__author = 'Zhaozitian'
 
 import re
 import urllib.request
