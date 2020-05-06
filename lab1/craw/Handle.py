@@ -22,11 +22,10 @@ class Handle(threading.Thread):
 		self.lock = threading.Lock()
 
 	def save_data(self, data, filename):
-		if not os.path.exists('blog'):
-			blog_path = os.path.join(os.path.abspath('.'),'blog')
-			os.mkdir(blog_path)
+		if not os.path.exists('F:/news'):
+			os.mkdir('F:/news')
 		try:
-			fout = open('./blog/' + filename + '.html', 'wb+')
+			fout = open('F:/news/' + filename + '.html', 'wb+')
 			fout.write(data)
 		except IOError as e:
 
