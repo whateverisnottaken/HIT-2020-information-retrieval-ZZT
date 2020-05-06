@@ -8,10 +8,12 @@ import tkinter.messagebox as messagebox
 import tkinter.font
 import threading
 import queue
+import random
 
 gui_que = queue.Queue()
 
 class Generator(threading.Thread):
+
 
 	def __init__(self, root):
 		threading.Thread.__init__(self)
@@ -21,7 +23,7 @@ class Generator(threading.Thread):
 		self.createFrameTop()
 
 	def createFrameTop(self):
-		self.frm_top_label = tk.Label(self.root, text = 'Zhao Zitian \'s Crawler', font = ('stencil', 15))
+		self.frm_top_label = tk.Label(self.root, text = 'Zhao Zitian \'s Crawler', font = ('stencil', 15), foreground = random.choice(['red']))
 		self.frm_top_label.grid(row = 0, column = 0, padx = 10, pady = 10)
 
 	def createFrame(self):
@@ -94,7 +96,7 @@ def center_window(w=300, h=220):
 
 if __name__ == '__main__':
 	root = tk.Tk()
-	root.title('')
+	root.title('lab1_crawler')
 	center_window()
 	t = Generator(root)
 	t.setDaemon(True)

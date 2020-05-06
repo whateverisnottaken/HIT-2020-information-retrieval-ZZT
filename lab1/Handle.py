@@ -26,7 +26,7 @@ class Handle(threading.Thread):
 			blog_path = os.path.join(os.path.abspath('.'),'blog')
 			os.mkdir(blog_path)
 		try:
-			fout = open('./' + filename + '.html', 'wb+')
+			fout = open('./blog/' + filename + '.html', 'wb+')
 			fout.write(data)
 		except IOError as e:
 
@@ -34,8 +34,10 @@ class Handle(threading.Thread):
 
 	def find_title(self,data):
 		data = data.decode('utf-8')
-		begin = data.find(r'<title') + 7
-		end = data.find('\r\n',begin)
+		begin = data.find('title') + 6
+		end = str(data).find('\r\n',begin)
+		if end > begin + 10:
+			end = begin + 10
 		title = str(cnt)
 		return title
 

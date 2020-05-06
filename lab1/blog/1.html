@@ -1,0 +1,1820 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <link rel="canonical" href="https://blog.csdn.net/foneone/"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="renderer" content="webkit"/>
+    <meta name="force-rendering" content="webkit"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="report" content='{"pid":"blog"}'>
+    <meta name="referrer" content="always">
+    <meta http-equiv="Cache-Control" content="no-siteapp" /><link rel="alternate" media="handheld" href="#" />
+    <meta name="shenma-site-verification" content="5a59773ab8077d4a62bf469ab966a63b_1497598848">
+        <meta name="csdn-baidu-search"  content='{"autorun":true,"install":true,"keyword":"越努力 越幸运_Foneone_CSDN博客-平时工作问题记录,机器学习理论学习,pytorch领域博主"}'>
+    
+    <link href="https://csdnimg.cn/public/favicon.ico" rel="SHORTCUT ICON">
+    <title>越努力 越幸运_Foneone_CSDN博客-平时工作问题记录,机器学习理论学习,pytorch领域博主</title>
+    <meta name="description" content="人工智能,Axure/墨刀,平时工作问题记录,机器学习理论学习,pytorch">
+    <script src='//g.csdnimg.cn/tingyun/1.8.3/blog.js' type='text/javascript'></script>
+        
+                    <link rel="stylesheet" href="https://csdnimg.cn/release/phoenix/template/new_css/list_enter-438f59db91.min.css">
+            <link rel="stylesheet" href="https://csdnimg.cn/release/phoenix/template/new_css/column_enter-a22083e56d.min.css">
+                    
+            <link rel="stylesheet" href="https://csdnimg.cn/release/phoenix/template/themes_skin/skin-blackboard/skin-blackboard-67ece31bdb.min.css">
+    
+<!--    自定义皮肤样式-->
+    
+    <script type="text/javascript">
+        var username = "foneone";
+        var blog_address = "https://blog.csdn.net/foneone";
+        var static_host = "https://csdnimg.cn/release/phoenix/";
+        var currentUserName = "";
+        var isOwner = false;
+        var loginUrl = "http://passport.csdn.net/account/login?from=https://blog.csdn.net/foneone/"
+        var blogUrl = "https://blog.csdn.net/";
+
+        var curSkin = "skin-blackboard";
+        // 收藏所需数据
+        var articleTitle = "越努力 越幸运";
+        var articleDesc = "人工智能,Axure/墨刀,平时工作问题记录,机器学习理论学习,pytorch";
+
+        var articleTitles = "越努力 越幸运_Foneone_CSDN博客-平时工作问题记录,机器学习理论学习,pytorch领域博主";
+        
+        var nickName = "Foneone";
+        var isCorporate = false;
+        var subDomainBlogUrl = "https://blog.csdn.net/"
+        var digg_base_url = "https://blog.csdn.net/foneone";
+        var articleDetailUrl = "";
+        var isShowThird = "0"
+        var skinStatus = "White"
+        var canRead = true;
+        
+        var sideToolbarVersion = 2.2;
+    </script>
+    <script src="https://csdnimg.cn/public/common/libs/jquery/jquery-1.9.1.min.js" type="text/javascript"></script>
+    <!--js引用-->
+            <script src="//g.csdnimg.cn/??fixed-sidebar/1.1.6/fixed-sidebar.js,report/1.5.0/report.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="https://csdnimg.cn/public/sandalstrap/1.4/css/sandalstrap.min.css">
+    <style>
+        .MathJax, .MathJax_Message, .MathJax_Preview{
+            display: none
+        }
+    </style>
+</head>
+<body class="nodata " > 
+    <link rel="stylesheet" href="https://csdnimg.cn/public/common/toolbar/content_toolbar_css/content_toolbar.css">
+    <script id="toolbar-tpl-scriptId" src="https://csdnimg.cn/public/common/toolbar/js/content_toolbar.js" type="text/javascript" domain="https://blog.csdn.net/"></script>
+    <script>
+    (function(){
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        }
+        else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+<link rel="stylesheet" href="https://csdnimg.cn/release/phoenix/vendor/pagination/paging-e040f0c7c8.css">
+<link rel="stylesheet" href="https://g.csdnimg.cn/lib/cropper/3.1.6/cropper.css">
+<script src="https://g.csdnimg.cn/lib/cropper/3.1.6/cropper.js"></script>
+<script type="text/javascript" crossorigin src="https://g.csdnimg.cn/user-login/2.2.4/user-login.js"></script>
+<div class="skin-boxshadow"></div>
+<div id="userSkin">
+	<div class="user-skin-box">
+		<p class="user-skin-title">
+        <span>自定义博客皮肤<span class="vip-get">VIP专享<span></span>
+        <span class="close-bt bt-back"><svg t="1567152543821" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="10924" xmlns:xlink="http://www.w3.org/1999/xlink" width="12" height="12"><defs><style type="text/css"></style></defs><path d="M512 438.378667L806.506667 143.893333a52.032 52.032 0 1 1 73.6 73.621334L585.621333 512l294.485334 294.485333a52.074667 52.074667 0 0 1-73.6 73.642667L512 585.621333 217.514667 880.128a52.053333 52.053333 0 1 1-73.621334-73.642667L438.378667 512 143.893333 217.514667a52.053333 52.053333 0 1 1 73.621334-73.621334L512 438.378667z" fill="" p-id="10925"></path></svg></span>
+        </p>
+		<div class="user-skin-item">
+			<div class="user-skin-left"><span>*</span>博客头图：</div>
+			<div class="user-skin-right">
+				<input type="file" class="upload-skin-img" id="uploadHeaderimg" style="display:none" value="">
+				<label for="uploadHeaderimg" class="upload-img">
+					<div class="icon-box">
+					<img class="upload-icon" src="https://csdnimg.cn/release/phoenix/template/new_img/upLoadImage.png" alt="">
+					<img style="display:none" class="success-upload-icon" src="https://csdnimg.cn/release/phoenix/template/new_img/upLoadImageWhite.png" alt="">
+					<p class="tip-massage">点击选择上传的图片</p>
+					</div>
+				</label>
+                <p  class="user-skin-tip">格式为PNG、JPG，宽度*高度大于1920*100像素，不超过2MB，主视觉建议放在右侧，请参照线上博客头图</p>
+			    <p  class="user-skin-color">请上传大于1920*100像素的图片！</p>
+			</div>
+		</div>
+		<div class="user-skin-item">
+            <div class="user-skin-left"><span></span>博客底图：</div>
+			<div class="user-skin-right">
+				<input type="file" class="upload-skin-img" id="uploadBgimg" style="display:none" value="">
+				<label for="uploadBgimg" class="upload-img">
+					<div class="icon-box">
+					<img class="upload-icon" src="https://csdnimg.cn/release/phoenix/template/new_img/upLoadImage.png" alt="">
+					<img style="display:none" class="success-upload-icon" src="https://csdnimg.cn/release/phoenix/template/new_img/upLoadImageWhite.png" alt="">					
+					<p class="tip-massage">点击选择上传的图片</p>
+					</div>
+				</label>
+                <p class="user-skin-tip">图片格式为PNG、JPG，不超过1MB，可上下左右平铺至整个背景</p>
+			</div>
+			
+		</div>
+		<div class="user-skin-item">
+            <div class="user-skin-left"><span></span>栏目图：</div>
+			<div class="user-skin-right">
+				<input type="file" class="upload-skin-img" id="uploadColumnimg" style="display:none" value="">
+				<label for="uploadColumnimg" class="upload-img">
+					<div class="icon-box">
+					<img class="upload-icon" src="https://csdnimg.cn/release/phoenix/template/new_img/upLoadImage.png" alt="">
+					<img style="display:none" class="success-upload-icon" src="https://csdnimg.cn/release/phoenix/template/new_img/upLoadImageWhite.png" alt="">					
+					<p class="tip-massage">点击选择上传的图片</p>
+					</div>
+				</label>
+                <p class="user-skin-tip">图片格式为PNG、JPG，图片宽度*高度为300*38像素，不超过0.5MB</p>
+			</div>
+			
+		</div>
+		<div class="user-skin-item user-skin-item-input">
+            <div class="user-skin-left"><span></span>主标题颜色：</div>
+			<div class="user-skin-right">
+				<input type="text" class="skin-input" id="topicColor" placeholder="#ffffff">
+                <p class="user-skin-tip">RGB颜色，例如：#AFAFAF</p>
+			</div>
+			
+		</div>
+		<div class="user-skin-item user-skin-item-input">
+            <div class="user-skin-left"><span></span>Hover：</div>
+			<div class="user-skin-right">
+				<input type="text" class="skin-input" id="topicHoverColor" placeholder="#ffffff">
+                <p class="user-skin-tip">RGB颜色，例如：#AFAFAF</p>
+			</div>
+			
+		</div>
+		<div class="user-skin-item user-skin-item-input">
+            <div class="user-skin-left"><span></span>副标题颜色：</div>
+			<div class="user-skin-right">
+				<input type="text" class="skin-input" id="subTopicColor" placeholder="#b8b8b8">
+                <p class="user-skin-tip">RGB颜色，例如：#AFAFAF</p>
+			</div>
+			
+		</div>
+		<div class="user-skin-bt">
+			<a href="javascript:;" class="user-skin-preview bt">预览</a>
+			<a href="javascript:;" class="user-skin-cancel bt bt-back">取消</a>
+			<a href="javascript:;" class="user-skin-refer bt">提交</a>
+		</div>
+	</div>
+</div>
+<div id="cropBox">
+	<div class="crop-box">
+		<p class="crop-box-title">
+        	<span>自定义博客皮肤</span>
+        	<span class="close-bt  bt-back"><svg t="1567152543821" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="10924" xmlns:xlink="http://www.w3.org/1999/xlink" width="12" height="12"><defs><style type="text/css"></style></defs><path d="M512 438.378667L806.506667 143.893333a52.032 52.032 0 1 1 73.6 73.621334L585.621333 512l294.485334 294.485333a52.074667 52.074667 0 0 1-73.6 73.642667L512 585.621333 217.514667 880.128a52.053333 52.053333 0 1 1-73.621334-73.642667L438.378667 512 143.893333 217.514667a52.053333 52.053333 0 1 1 73.621334-73.621334L512 438.378667z" fill="" p-id="10925"></path></svg></span>
+        </p>
+		<div class="crop-img-before">
+			<img src="" alt="" id="cropImg">
+		</div>
+		<div class="crop-zoom">
+			<a href="javascript:;" class="bt-reduce">-</a><a href="javascript:;" class="bt-add">+</a>
+		</div>
+		<div class="crop-img-after">
+			<div  class="final-img"></div>
+		</div>
+		<div class="crop-bt">
+			<a href="javascript:;" class="bt-prev bt-back">上一步</a><a href="javascript:;" class="bt-next">保存</a>
+		</div>
+	</div>
+</div><header>
+	<div class="container d-flex clearfix" style="background-image: ">
+		<div class="title-box">
+            			<h1 class="title-blog">
+				<a href="https://blog.csdn.net/foneone">越努力 越幸运</a>
+			</h1>
+			<p class="description "></p>
+		</div>
+		<div class="opt-box d-flex justify-content-end">
+		    														<a class="btn btn-sm" data-report-click='{"mod":"popu_832","dest":"https://blog.csdn.net//pheapi/skin/useThemSkin?assign_skin_id=2","ab":"new"}' id="meUser"  href="https://blog.csdn.net//pheapi/skin/useThemSkin?assign_skin_id=2">
+					<img src="https://csdnimg.cn/release/phoenix/template/new_img/useSkinWhite.png" alt="">
+					我也要用</a>
+					                            		</div>
+        	</div>
+	</header>
+<script src="https://dup.baidustatic.com/js/ds.js"></script>
+<div class="container clearfix pt0" id="mainBox">
+    <main>
+      <div class="filter-box d-flex align-items-center">
+      <form action="" id=seeOriginal>
+    <label class="chk-box" for="chkOriginal">
+      <input onchange="this.checked ? document.getElementById('seeOriginal').submit() : location.href = 'https://blog.csdn.net/foneone/'" type="checkbox" name="t" value="1"  id="chkOriginal">只看原创</label></form>
+    <dl class="filter-sort-box d-flex align-items-center">
+    <dt>排序：</dt>
+    <dd><a href="javascript:void(0);" data-report-query="" class="btn-filter-sort active" target="_self">默认</a></dd>
+    <dd><a href="https://blog.csdn.net/foneone/" data-report-query="orderby=UpdateTime" class="btn-filter-sort " target="_self">按更新时间</a></dd>
+    <dd><a href="https://blog.csdn.net/foneone/" data-report-query="orderby=ViewCount" class="btn-filter-sort " target="_self">按访问量</a></dd>
+    <dd><a class="btn btn-sm rss" href="https://blog.csdn.net/foneone/rss/list">
+    <img class="rss-img" src="https://csdnimg.cn/release/phoenix/template/new_img/rss.png" alt="">RSS订阅</a>
+    </dd>
+  </dl>
+</div>
+
+
+
+<div class="article-list">
+  <div class="article-item-box csdn-tracking-statistics" data-articleid="105855367">
+        <h4 class="">
+        <a href="https://blog.csdn.net/foneone/article/details/105855367" target="_blank">
+        <span class="article-type type-1 float-none">原创</span>        遗传算法（GA）中的编码方式-二进制编码、格雷编码、实数编码              </a> 
+    </h4>
+    <p class="content">
+      <a href="https://blog.csdn.net/foneone/article/details/105855367" target="_blank">
+        4、30任务
+      </a>
+    </p>
+    <div class="info-box d-flex align-content-center">
+    <p>
+        <span class="date">
+        2020-05-03 10:55:50</span>
+                <span class="read-num"><img src="https://csdnimg.cn/release/phoenix/template/new_img/readCountWhite.png" alt="">41</span>
+                <span class="read-num"><img src="https://csdnimg.cn/release/phoenix/template/new_img/commentCountWhite.png" alt="">0</span>
+      </p>
+    </div>
+        </div>
+  <div class="article-item-box csdn-tracking-statistics" data-articleid="105383678">
+        <h4 class="">
+        <a href="https://blog.csdn.net/foneone/article/details/105383678" target="_blank">
+        <span class="article-type type-2 float-none">转载</span>        Python— * 和 ** 的区别和作用              </a> 
+    </h4>
+    <p class="content">
+      <a href="https://blog.csdn.net/foneone/article/details/105383678" target="_blank">
+        *和 **的用途和作用
+      </a>
+    </p>
+    <div class="info-box d-flex align-content-center">
+    <p>
+        <span class="date">
+        2020-04-08 21:22:16</span>
+                <span class="read-num"><img src="https://csdnimg.cn/release/phoenix/template/new_img/readCountWhite.png" alt="">106</span>
+                <span class="read-num"><img src="https://csdnimg.cn/release/phoenix/template/new_img/commentCountWhite.png" alt="">0</span>
+      </p>
+    </div>
+        </div>
+  <div class="article-item-box csdn-tracking-statistics" data-articleid="105383714">
+        <h4 class="">
+        <a href="https://blog.csdn.net/foneone/article/details/105383714" target="_blank">
+        <span class="article-type type-1 float-none">原创</span>        Pyhon-列表切片操作              </a> 
+    </h4>
+    <p class="content">
+      <a href="https://blog.csdn.net/foneone/article/details/105383714" target="_blank">
+        matrix[::1]
+
+matrix[::]是什么
+      </a>
+    </p>
+    <div class="info-box d-flex align-content-center">
+    <p>
+        <span class="date">
+        2020-04-08 20:24:02</span>
+                <span class="read-num"><img src="https://csdnimg.cn/release/phoenix/template/new_img/readCountWhite.png" alt="">18</span>
+                <span class="read-num"><img src="https://csdnimg.cn/release/phoenix/template/new_img/commentCountWhite.png" alt="">0</span>
+      </p>
+    </div>
+        </div>
+  <div class="article-item-box csdn-tracking-statistics" data-articleid="105383649">
+        <h4 class="">
+        <a href="https://blog.csdn.net/foneone/article/details/105383649" target="_blank">
+        <span class="article-type type-1 float-none">原创</span>        Python-字典的增删改查常见操作              </a> 
+    </h4>
+    <p class="content">
+      <a href="https://blog.csdn.net/foneone/article/details/105383649" target="_blank">
+        字典创建
+
+字典的增删改查
+
+示例：词频统计
+      </a>
+    </p>
+    <div class="info-box d-flex align-content-center">
+    <p>
+        <span class="date">
+        2020-04-08 17:58:12</span>
+                <span class="read-num"><img src="https://csdnimg.cn/release/phoenix/template/new_img/readCountWhite.png" alt="">35</span>
+                <span class="read-num"><img src="https://csdnimg.cn/release/phoenix/template/new_img/commentCountWhite.png" alt="">0</span>
+      </p>
+    </div>
+        </div>
+  <div class="article-item-box csdn-tracking-statistics" data-articleid="105372859">
+        <h4 class="">
+        <a href="https://blog.csdn.net/foneone/article/details/105372859" target="_blank">
+        <span class="article-type type-1 float-none">原创</span>        Phyhon-内置函数zip()              </a> 
+    </h4>
+    <p class="content">
+      <a href="https://blog.csdn.net/foneone/article/details/105372859" target="_blank">
+        matrix[::] = zip(*matrix[::-1])
+
+zip(iterable...)主要作用是将可迭代对象（list、string等）作为参数，将迭代器1、2、3中相同位置的参数，组成元组最后封装成一种格式（列表、字典、元组）返回。
+
+1，
+
+
+
+字典何而使用
+
+*与 **区别
+
+列...      </a>
+    </p>
+    <div class="info-box d-flex align-content-center">
+    <p>
+        <span class="date">
+        2020-04-08 11:35:44</span>
+                <span class="read-num"><img src="https://csdnimg.cn/release/phoenix/template/new_img/readCountWhite.png" alt="">35</span>
+                <span class="read-num"><img src="https://csdnimg.cn/release/phoenix/template/new_img/commentCountWhite.png" alt="">0</span>
+      </p>
+    </div>
+        </div>
+  <div class="article-item-box csdn-tracking-statistics" data-articleid="105205547">
+        <h4 class="">
+        <a href="https://blog.csdn.net/foneone/article/details/105205547" target="_blank">
+        <span class="article-type type-1 float-none">原创</span>        python-多重赋值问题              </a> 
+    </h4>
+    <p class="content">
+      <a href="https://blog.csdn.net/foneone/article/details/105205547" target="_blank">
+        3/31
+      </a>
+    </p>
+    <div class="info-box d-flex align-content-center">
+    <p>
+        <span class="date">
+        2020-03-31 11:43:45</span>
+                <span class="read-num"><img src="https://csdnimg.cn/release/phoenix/template/new_img/readCountWhite.png" alt="">25</span>
+                <span class="read-num"><img src="https://csdnimg.cn/release/phoenix/template/new_img/commentCountWhite.png" alt="">0</span>
+      </p>
+    </div>
+        </div>
+  <div class="article-item-box csdn-tracking-statistics" data-articleid="104636466">
+        <h4 class="">
+        <a href="https://blog.csdn.net/foneone/article/details/104636466" target="_blank">
+        <span class="article-type type-1 float-none">原创</span>        Python-基本排序方法实现              </a> 
+    </h4>
+    <p class="content">
+      <a href="https://blog.csdn.net/foneone/article/details/104636466" target="_blank">
+        汪锋
+      </a>
+    </p>
+    <div class="info-box d-flex align-content-center">
+    <p>
+        <span class="date">
+        2020-03-30 18:28:44</span>
+                <span class="read-num"><img src="https://csdnimg.cn/release/phoenix/template/new_img/readCountWhite.png" alt="">45</span>
+                <span class="read-num"><img src="https://csdnimg.cn/release/phoenix/template/new_img/commentCountWhite.png" alt="">0</span>
+      </p>
+    </div>
+        </div>
+  <div class="article-item-box csdn-tracking-statistics" data-articleid="104983641">
+        <h4 class="">
+        <a href="https://blog.csdn.net/foneone/article/details/104983641" target="_blank">
+        <span class="article-type type-1 float-none">原创</span>        python-sort()与sorted()区别与联系              </a> 
+    </h4>
+    <p class="content">
+      <a href="https://blog.csdn.net/foneone/article/details/104983641" target="_blank">
+        今天任务
+      </a>
+    </p>
+    <div class="info-box d-flex align-content-center">
+    <p>
+        <span class="date">
+        2020-03-28 15:03:29</span>
+                <span class="read-num"><img src="https://csdnimg.cn/release/phoenix/template/new_img/readCountWhite.png" alt="">33</span>
+                <span class="read-num"><img src="https://csdnimg.cn/release/phoenix/template/new_img/commentCountWhite.png" alt="">0</span>
+      </p>
+    </div>
+        </div>
+  <div class="article-item-box csdn-tracking-statistics" data-articleid="104931139">
+        <h4 class="">
+        <a href="https://blog.csdn.net/foneone/article/details/104931139" target="_blank">
+        <span class="article-type type-2 float-none">转载</span>        Python中collections模块（内置模块）              </a> 
+    </h4>
+    <p class="content">
+      <a href="https://blog.csdn.net/foneone/article/details/104931139" target="_blank">
+        转载：https://www.cnblogs.com/dianel/p/10787693.html
+
+collections模块实现了特定目标的容器，以提供Python标准内建容器 dict、list、set、tuple 的替代选择。
+
+Counter
+
+Counter是一个dict子类，主要是用...      </a>
+    </p>
+    <div class="info-box d-flex align-content-center">
+    <p>
+        <span class="date">
+        2020-03-27 09:49:07</span>
+                <span class="read-num"><img src="https://csdnimg.cn/release/phoenix/template/new_img/readCountWhite.png" alt="">32</span>
+                <span class="read-num"><img src="https://csdnimg.cn/release/phoenix/template/new_img/commentCountWhite.png" alt="">0</span>
+      </p>
+    </div>
+        </div>
+  <div class="article-item-box csdn-tracking-statistics" data-articleid="105061332">
+        <h4 class="">
+        <a href="https://blog.csdn.net/foneone/article/details/105061332" target="_blank">
+        <span class="article-type type-1 float-none">原创</span>        论文参考文献引用小技巧              </a> 
+    </h4>
+    <p class="content">
+      <a href="https://blog.csdn.net/foneone/article/details/105061332" target="_blank">
+        一般情况下，会有三种参考文献格式：GB/T7714，APA，MLA（Modern Language Association）。
+
+其中 中国毕业论文和在中国发表的文章，都是以GB/T 7714为标准的，是国家标准。中文参考文献，一般直接用“知网-&gt;文章-&gt;导出参考文献”；知网里面没有的...      </a>
+    </p>
+    <div class="info-box d-flex align-content-center">
+    <p>
+        <span class="date">
+        2020-03-24 10:10:14</span>
+                <span class="read-num"><img src="https://csdnimg.cn/release/phoenix/template/new_img/readCountWhite.png" alt="">144</span>
+                <span class="read-num"><img src="https://csdnimg.cn/release/phoenix/template/new_img/commentCountWhite.png" alt="">0</span>
+      </p>
+    </div>
+        </div>
+  <div class="article-item-box csdn-tracking-statistics" data-articleid="103984895">
+        <h4 class="">
+        <a href="https://blog.csdn.net/foneone/article/details/103984895" target="_blank">
+        <span class="article-type type-1 float-none">原创</span>        Python-argparse库基本使用方法和add_argument() 参数详解              </a> 
+    </h4>
+    <p class="content">
+      <a href="https://blog.csdn.net/foneone/article/details/103984895" target="_blank">
+        官网：https://docs.python.org/3.6/library/argparse.html
+
+argparse库是一个存储参数库，可以用来进行模型训练过程中的参数保存作为一个整体，以便于使用和更改。
+
+创建
+
+
+import argparse
+parser = argparse.Ar...      </a>
+    </p>
+    <div class="info-box d-flex align-content-center">
+    <p>
+        <span class="date">
+        2020-02-26 00:05:23</span>
+                <span class="read-num"><img src="https://csdnimg.cn/release/phoenix/template/new_img/readCountWhite.png" alt="">343</span>
+                <span class="read-num"><img src="https://csdnimg.cn/release/phoenix/template/new_img/commentCountWhite.png" alt="">0</span>
+      </p>
+    </div>
+        </div>
+  <div class="article-item-box csdn-tracking-statistics" data-articleid="104445320">
+        <h4 class="">
+        <a href="https://blog.csdn.net/foneone/article/details/104445320" target="_blank">
+        <span class="article-type type-1 float-none">原创</span>        pytorch - K折交叉验证过程说明及实现              </a> 
+    </h4>
+    <p class="content">
+      <a href="https://blog.csdn.net/foneone/article/details/104445320" target="_blank">
+        代码主要核心思想来自：https://www.cnblogs.com/JadenFK3326/p/12164519.html
+
+K折交叉交叉验证的过程如下：
+
+以200条数据，十折交叉验证为例子，十折也就是将数据分成10组，进行10组训练，每组用于测试的数据为：数据总条数/组数，即每组20条用于v...      </a>
+    </p>
+    <div class="info-box d-flex align-content-center">
+    <p>
+        <span class="date">
+        2020-02-22 19:09:48</span>
+                <span class="read-num"><img src="https://csdnimg.cn/release/phoenix/template/new_img/readCountWhite.png" alt="">1826</span>
+                <span class="read-num"><img src="https://csdnimg.cn/release/phoenix/template/new_img/commentCountWhite.png" alt="">3</span>
+      </p>
+    </div>
+        </div>
+  <div class="article-item-box csdn-tracking-statistics" data-articleid="104443612">
+        <h4 class="">
+        <a href="https://blog.csdn.net/foneone/article/details/104443612" target="_blank">
+        <span class="article-type type-1 float-none">原创</span>        python 中的内置函数slice()              </a> 
+    </h4>
+    <p class="content">
+      <a href="https://blog.csdn.net/foneone/article/details/104443612" target="_blank">
+        slice()函数是一个切片函数，可以作用于list,tuple,numpy等结构，其作用类似于列表中常见的切片操作，但是如果按照某个长度将list等可以用于切片的序列做等分，一般可以用一个循环可以实现。
+
+
+l =[1,2,3,4,5,6,7,8,9,10]
+i = 0
+while(i&lt;1...      </a>
+    </p>
+    <div class="info-box d-flex align-content-center">
+    <p>
+        <span class="date">
+        2020-02-22 15:21:43</span>
+                <span class="read-num"><img src="https://csdnimg.cn/release/phoenix/template/new_img/readCountWhite.png" alt="">61</span>
+                <span class="read-num"><img src="https://csdnimg.cn/release/phoenix/template/new_img/commentCountWhite.png" alt="">0</span>
+      </p>
+    </div>
+        </div>
+  <div class="article-item-box csdn-tracking-statistics" data-articleid="104261283">
+        <h4 class="">
+        <a href="https://blog.csdn.net/foneone/article/details/104261283" target="_blank">
+        <span class="article-type type-1 float-none">原创</span>        Python-Leecode-011-盛最多水的容器              </a> 
+    </h4>
+    <p class="content">
+      <a href="https://blog.csdn.net/foneone/article/details/104261283" target="_blank">
+        题目：
+
+               
+
+解法一：组合所有可能，找出最大（超出时间限制）
+
+
+class Solution:
+    def maxArea(self, height: List[int]) -&gt; int:
+        max_= 0
+        for i in ...      </a>
+    </p>
+    <div class="info-box d-flex align-content-center">
+    <p>
+        <span class="date">
+        2020-02-11 12:56:24</span>
+                <span class="read-num"><img src="https://csdnimg.cn/release/phoenix/template/new_img/readCountWhite.png" alt="">55</span>
+                <span class="read-num"><img src="https://csdnimg.cn/release/phoenix/template/new_img/commentCountWhite.png" alt="">0</span>
+      </p>
+    </div>
+        </div>
+  <div class="article-item-box csdn-tracking-statistics" data-articleid="101945415">
+        <h4 class="">
+        <a href="https://blog.csdn.net/foneone/article/details/101945415" target="_blank">
+        <span class="article-type type-1 float-none">原创</span>        回归问题-逐步回归(Stepwise Regression)              </a> 
+    </h4>
+    <p class="content">
+      <a href="https://blog.csdn.net/foneone/article/details/101945415" target="_blank">
+        逐步回归（Stepwise Regression）
+
+逐步回归主要解决的是多变量共线性问题，也就是不是线性无关的关系，它是基于变量解释性来进行特征提取的一种回归方法。
+
+逐步回归的主要做法有三种：
+
+（一）Forward selection：将自变量逐个引入模型，引入一个自变量后要查看该变量的引入...      </a>
+    </p>
+    <div class="info-box d-flex align-content-center">
+    <p>
+        <span class="date">
+        2020-02-07 15:56:19</span>
+                <span class="read-num"><img src="https://csdnimg.cn/release/phoenix/template/new_img/readCountWhite.png" alt="">1269</span>
+                <span class="read-num"><img src="https://csdnimg.cn/release/phoenix/template/new_img/commentCountWhite.png" alt="">0</span>
+      </p>
+    </div>
+        </div>
+  <div class="article-item-box csdn-tracking-statistics" data-articleid="104206443">
+        <h4 class="">
+        <a href="https://blog.csdn.net/foneone/article/details/104206443" target="_blank">
+        <span class="article-type type-1 float-none">原创</span>        from ast import literal_eval 去掉列表结构，仅留字符串              </a> 
+    </h4>
+    <p class="content">
+      <a href="https://blog.csdn.net/foneone/article/details/104206443" target="_blank">
+        直接print是这样的形式，直接把[]去掉，剩下字符串结构。
+
+
+
+
+from ast import literal_eval
+import pandas as pd
+
+data = pd.read_csv(path)
+
+for contents in data:
+    print(conten...      </a>
+    </p>
+    <div class="info-box d-flex align-content-center">
+    <p>
+        <span class="date">
+        2020-02-07 10:14:30</span>
+                <span class="read-num"><img src="https://csdnimg.cn/release/phoenix/template/new_img/readCountWhite.png" alt="">58</span>
+                <span class="read-num"><img src="https://csdnimg.cn/release/phoenix/template/new_img/commentCountWhite.png" alt="">0</span>
+      </p>
+    </div>
+        </div>
+  <div class="article-item-box csdn-tracking-statistics" data-articleid="104130571">
+        <h4 class="">
+        <a href="https://blog.csdn.net/foneone/article/details/104130571" target="_blank">
+        <span class="article-type type-1 float-none">原创</span>        python中的re模块（正则表达式）              </a> 
+    </h4>
+    <p class="content">
+      <a href="https://blog.csdn.net/foneone/article/details/104130571" target="_blank">
+        re模块是python中特有的，但是正则表达式是通用的。
+
+正则表达式介绍
+
+re模块常用函数
+
+正则表达式介绍
+
+(1)特殊符号处理常用逻辑
+
+符号
+			含义
+			正则表达式
+			可以匹配的例子
+			不可能匹配的例子
+		.
+			匹配任一字符
+			&quot;a.c&quot;
+		...      </a>
+    </p>
+    <div class="info-box d-flex align-content-center">
+    <p>
+        <span class="date">
+        2020-02-01 18:54:51</span>
+                <span class="read-num"><img src="https://csdnimg.cn/release/phoenix/template/new_img/readCountWhite.png" alt="">38</span>
+                <span class="read-num"><img src="https://csdnimg.cn/release/phoenix/template/new_img/commentCountWhite.png" alt="">0</span>
+      </p>
+    </div>
+        </div>
+  <div class="article-item-box csdn-tracking-statistics" data-articleid="103874770">
+        <h4 class="">
+        <a href="https://blog.csdn.net/foneone/article/details/103874770" target="_blank">
+        <span class="article-type type-1 float-none">原创</span>        torch.stack() 与 torch.cat()              </a> 
+    </h4>
+    <p class="content">
+      <a href="https://blog.csdn.net/foneone/article/details/103874770" target="_blank">
+        torch.stack()和torch.cat()都是拼接tensor常用操作，stack()可以看做并联，cat()为串联。
+
+torch.stack()
+
+官网：https://pytorch.org/docs/stable/torch.html#torch.stack
+
+
+torch.sta...      </a>
+    </p>
+    <div class="info-box d-flex align-content-center">
+    <p>
+        <span class="date">
+        2020-01-28 10:41:21</span>
+                <span class="read-num"><img src="https://csdnimg.cn/release/phoenix/template/new_img/readCountWhite.png" alt="">1654</span>
+                <span class="read-num"><img src="https://csdnimg.cn/release/phoenix/template/new_img/commentCountWhite.png" alt="">0</span>
+      </p>
+    </div>
+        </div>
+  <div class="article-item-box csdn-tracking-statistics" data-articleid="104002372">
+        <h4 class="">
+        <a href="https://blog.csdn.net/foneone/article/details/104002372" target="_blank">
+        <span class="article-type type-1 float-none">原创</span>        pytorch中的nn.LSTM模块参数详解              </a> 
+    </h4>
+    <p class="content">
+      <a href="https://blog.csdn.net/foneone/article/details/104002372" target="_blank">
+        官网：https://pytorch.org/docs/stable/nn.html#torch.nn.LSTM
+
+Parameters（参数）：
+
+
+input_size：输入的维度
+
+hidden_size：h的维度
+
+num_layers：堆叠LSTM的层数，默认值为1
+
+bias：偏置 ，...      </a>
+    </p>
+    <div class="info-box d-flex align-content-center">
+    <p>
+        <span class="date">
+        2020-01-26 11:03:12</span>
+                <span class="read-num"><img src="https://csdnimg.cn/release/phoenix/template/new_img/readCountWhite.png" alt="">492</span>
+                <span class="read-num"><img src="https://csdnimg.cn/release/phoenix/template/new_img/commentCountWhite.png" alt="">1</span>
+      </p>
+    </div>
+        </div>
+  <div class="article-item-box csdn-tracking-statistics" data-articleid="103926319">
+        <h4 class="">
+        <a href="https://blog.csdn.net/foneone/article/details/103926319" target="_blank">
+        <span class="article-type type-1 float-none">原创</span>        torch.max() 和 torch.min()              </a> 
+    </h4>
+    <p class="content">
+      <a href="https://blog.csdn.net/foneone/article/details/103926319" target="_blank">
+        官网：https://pytorch.org/docs/stable/torch.html#torch.max
+
+torch.max()和torch.min()是比较tensor大小的函数。两者用法相同，所以就总结了一个。
+
+（1）不指定比较维度：torch.max(input)
+
+
+x = to...      </a>
+    </p>
+    <div class="info-box d-flex align-content-center">
+    <p>
+        <span class="date">
+        2020-01-10 16:36:52</span>
+                <span class="read-num"><img src="https://csdnimg.cn/release/phoenix/template/new_img/readCountWhite.png" alt="">272</span>
+                <span class="read-num"><img src="https://csdnimg.cn/release/phoenix/template/new_img/commentCountWhite.png" alt="">0</span>
+      </p>
+    </div>
+        </div>
+  <div class="article-item-box csdn-tracking-statistics" data-articleid="103923036">
+        <h4 class="">
+        <a href="https://blog.csdn.net/foneone/article/details/103923036" target="_blank">
+        <span class="article-type type-1 float-none">原创</span>        TextCNN(文本分类)              </a> 
+    </h4>
+    <p class="content">
+      <a href="https://blog.csdn.net/foneone/article/details/103923036" target="_blank">
+        TextCNN网络结构如图所示：
+
+
+
+利用TextCNN做文本分类基本流程（以句子分类为例）：
+
+（1）将句子转成词，利用词建立字典
+
+（2）词转成向量（word2vec，Glove，bert，nn.embedding）
+
+（3）句子补0操作变成等长
+
+（4）建TextCNN模型，训练，测试
+
+...      </a>
+    </p>
+    <div class="info-box d-flex align-content-center">
+    <p>
+        <span class="date">
+        2020-01-10 13:44:18</span>
+                <span class="read-num"><img src="https://csdnimg.cn/release/phoenix/template/new_img/readCountWhite.png" alt="">265</span>
+                <span class="read-num"><img src="https://csdnimg.cn/release/phoenix/template/new_img/commentCountWhite.png" alt="">0</span>
+      </p>
+    </div>
+        </div>
+  <div class="article-item-box csdn-tracking-statistics" data-articleid="103882755">
+        <h4 class="">
+        <a href="https://blog.csdn.net/foneone/article/details/103882755" target="_blank">
+        <span class="article-type type-1 float-none">原创</span>        torch.Tensor下常用的函数              </a> 
+    </h4>
+    <p class="content">
+      <a href="https://blog.csdn.net/foneone/article/details/103882755" target="_blank">
+        （1）torch.Tensor.permute(重新排列维度-不能改变维度)
+
+（2）torch.Tensor.view（按照原维度-改变维度）
+
+（1）torch.Tensor.permute
+
+官网：https://pytorch.org/docs/stable/tensors.html#to...      </a>
+    </p>
+    <div class="info-box d-flex align-content-center">
+    <p>
+        <span class="date">
+        2020-01-08 15:57:59</span>
+                <span class="read-num"><img src="https://csdnimg.cn/release/phoenix/template/new_img/readCountWhite.png" alt="">216</span>
+                <span class="read-num"><img src="https://csdnimg.cn/release/phoenix/template/new_img/commentCountWhite.png" alt="">0</span>
+      </p>
+    </div>
+        </div>
+  <div class="article-item-box csdn-tracking-statistics" data-articleid="103881687">
+        <h4 class="">
+        <a href="https://blog.csdn.net/foneone/article/details/103881687" target="_blank">
+        <span class="article-type type-1 float-none">原创</span>        torch.nn.Embedding              </a> 
+    </h4>
+    <p class="content">
+      <a href="https://blog.csdn.net/foneone/article/details/103881687" target="_blank">
+        官网：https://pytorch.org/docs/stable/nn.html#embedding
+
+
+torch.nn.Embedding(num_embeddings,embedding_dim,padding_idx=None,max_norm=None,norm_type=2.0,s...      </a>
+    </p>
+    <div class="info-box d-flex align-content-center">
+    <p>
+        <span class="date">
+        2020-01-07 22:10:32</span>
+                <span class="read-num"><img src="https://csdnimg.cn/release/phoenix/template/new_img/readCountWhite.png" alt="">206</span>
+                <span class="read-num"><img src="https://csdnimg.cn/release/phoenix/template/new_img/commentCountWhite.png" alt="">0</span>
+      </p>
+    </div>
+        </div>
+  <div class="article-item-box csdn-tracking-statistics" data-articleid="103876519">
+        <h4 class="">
+        <a href="https://blog.csdn.net/foneone/article/details/103876519" target="_blank">
+        <span class="article-type type-1 float-none">原创</span>        torch.bmm() 与 torch.matmul()              </a> 
+    </h4>
+    <p class="content">
+      <a href="https://blog.csdn.net/foneone/article/details/103876519" target="_blank">
+        torch.bmm()
+
+torch.matmul()
+
+torch.bmm()强制规定维度和大小相同
+
+torch.matmul()没有强制规定维度和大小，可以用利用广播机制进行不同维度的相乘操作
+
+当进行操作的两个tensor都是3D时，两者等同。
+
+torch.bmm()
+
+官网：https...      </a>
+    </p>
+    <div class="info-box d-flex align-content-center">
+    <p>
+        <span class="date">
+        2020-01-07 18:26:57</span>
+                <span class="read-num"><img src="https://csdnimg.cn/release/phoenix/template/new_img/readCountWhite.png" alt="">541</span>
+                <span class="read-num"><img src="https://csdnimg.cn/release/phoenix/template/new_img/commentCountWhite.png" alt="">0</span>
+      </p>
+    </div>
+        </div>
+  <div class="article-item-box csdn-tracking-statistics" data-articleid="103876131">
+        <h4 class="">
+        <a href="https://blog.csdn.net/foneone/article/details/103876131" target="_blank">
+        <span class="article-type type-1 float-none">原创</span>        torch.t()              </a> 
+    </h4>
+    <p class="content">
+      <a href="https://blog.csdn.net/foneone/article/details/103876131" target="_blank">
+        官网：https://pytorch.org/docs/stable/torch.html#torch.t
+
+
+torch.t(input)→ Tensor
+
+
+torch.t()是一个类似于求矩阵的转置的函数，但是它要求输入的tensor结构维度&lt;=2D。
+
+当input维度为0D或者1D...      </a>
+    </p>
+    <div class="info-box d-flex align-content-center">
+    <p>
+        <span class="date">
+        2020-01-07 16:08:01</span>
+                <span class="read-num"><img src="https://csdnimg.cn/release/phoenix/template/new_img/readCountWhite.png" alt="">1175</span>
+                <span class="read-num"><img src="https://csdnimg.cn/release/phoenix/template/new_img/commentCountWhite.png" alt="">0</span>
+      </p>
+    </div>
+        </div>
+  <div class="article-item-box csdn-tracking-statistics" data-articleid="103875250">
+        <h4 class="">
+        <a href="https://blog.csdn.net/foneone/article/details/103875250" target="_blank">
+        <span class="article-type type-1 float-none">原创</span>        torch.split() 与 torch.chunk()              </a> 
+    </h4>
+    <p class="content">
+      <a href="https://blog.csdn.net/foneone/article/details/103875250" target="_blank">
+        torch.split()
+
+torch.chunk()
+
+区别
+
+两者都是切分tensor操作，有一些略微的不同。
+
+torch.split()
+
+官网：https://pytorch.org/docs/stable/torch.html#torch.split
+
+
+torch.split(te...      </a>
+    </p>
+    <div class="info-box d-flex align-content-center">
+    <p>
+        <span class="date">
+        2020-01-07 15:49:08</span>
+                <span class="read-num"><img src="https://csdnimg.cn/release/phoenix/template/new_img/readCountWhite.png" alt="">899</span>
+                <span class="read-num"><img src="https://csdnimg.cn/release/phoenix/template/new_img/commentCountWhite.png" alt="">0</span>
+      </p>
+    </div>
+        </div>
+  <div class="article-item-box csdn-tracking-statistics" data-articleid="103819681">
+        <h4 class="">
+        <a href="https://blog.csdn.net/foneone/article/details/103819681" target="_blank">
+        <span class="article-type type-2 float-none">转载</span>        nn.embedding              </a> 
+    </h4>
+    <p class="content">
+      <a href="https://blog.csdn.net/foneone/article/details/103819681" target="_blank">
+        https://www.cnblogs.com/lindaxin/p/7991436.html
+      </a>
+    </p>
+    <div class="info-box d-flex align-content-center">
+    <p>
+        <span class="date">
+        2020-01-03 14:21:30</span>
+                <span class="read-num"><img src="https://csdnimg.cn/release/phoenix/template/new_img/readCountWhite.png" alt="">241</span>
+                <span class="read-num"><img src="https://csdnimg.cn/release/phoenix/template/new_img/commentCountWhite.png" alt="">0</span>
+      </p>
+    </div>
+        </div>
+  <div class="article-item-box csdn-tracking-statistics" data-articleid="103811328">
+        <h4 class="">
+        <a href="https://blog.csdn.net/foneone/article/details/103811328" target="_blank">
+        <span class="article-type type-1 float-none">原创</span>        BPE(Byte Pair Encoding)算法              </a> 
+    </h4>
+    <p class="content">
+      <a href="https://blog.csdn.net/foneone/article/details/103811328" target="_blank">
+        BPE算法，最早应用于NLP任务出现于《Neural Machine Translation of Rare Words with Subword Units》这篇文章，是一种解决NMT任务中，出现OOV（out-of-vocabulary）的方法。在NMT任务中，如果出现OOV问题，最常见的就是...      </a>
+    </p>
+    <div class="info-box d-flex align-content-center">
+    <p>
+        <span class="date">
+        2020-01-03 11:03:13</span>
+                <span class="read-num"><img src="https://csdnimg.cn/release/phoenix/template/new_img/readCountWhite.png" alt="">554</span>
+                <span class="read-num"><img src="https://csdnimg.cn/release/phoenix/template/new_img/commentCountWhite.png" alt="">1</span>
+      </p>
+    </div>
+        </div>
+  <div class="article-item-box csdn-tracking-statistics" data-articleid="103585783">
+        <h4 class="">
+        <a href="https://blog.csdn.net/foneone/article/details/103585783" target="_blank">
+        <span class="article-type type-1 float-none">原创</span>        Double-Array Trie过程详解              </a> 
+    </h4>
+    <p class="content">
+      <a href="https://blog.csdn.net/foneone/article/details/103585783" target="_blank">
+        Double-Array Trie分为静态构建和动态构建两种情况，
+
+动态构建过程中主要利用的公式是：
+
+            base[s]+c=t
+
+            check[t]=base[s]
+
+静态构建的过程中主要利用的动态转移公式是：
+
+            base[s...      </a>
+    </p>
+    <div class="info-box d-flex align-content-center">
+    <p>
+        <span class="date">
+        2019-12-17 19:24:30</span>
+                <span class="read-num"><img src="https://csdnimg.cn/release/phoenix/template/new_img/readCountWhite.png" alt="">51</span>
+                <span class="read-num"><img src="https://csdnimg.cn/release/phoenix/template/new_img/commentCountWhite.png" alt="">0</span>
+      </p>
+    </div>
+        </div>
+  <div class="article-item-box csdn-tracking-statistics" data-articleid="103493728">
+        <h4 class="">
+        <a href="https://blog.csdn.net/foneone/article/details/103493728" target="_blank">
+        <span class="article-type type-1 float-none">原创</span>        matlab文件导出成jar;Java再调用jar步骤详解              </a> 
+    </h4>
+    <p class="content">
+      <a href="https://blog.csdn.net/foneone/article/details/103493728" target="_blank">
+        使用工具：matlab2018b，jdk:1.8 ,eclipse
+
+1，查看环境
+
+查看matlab环境：在matlab命令行输入：version -java
+
+     
+
+查看本机jdk环境：在cmd下输入： java -version
+
+     
+
+必须保证两处的jdk环境是相同的1.8...      </a>
+    </p>
+    <div class="info-box d-flex align-content-center">
+    <p>
+        <span class="date">
+        2019-12-11 17:57:29</span>
+                <span class="read-num"><img src="https://csdnimg.cn/release/phoenix/template/new_img/readCountWhite.png" alt="">84</span>
+                <span class="read-num"><img src="https://csdnimg.cn/release/phoenix/template/new_img/commentCountWhite.png" alt="">0</span>
+      </p>
+    </div>
+        </div>
+  <div class="article-item-box csdn-tracking-statistics" data-articleid="103483628">
+        <h4 class="">
+        <a href="https://blog.csdn.net/foneone/article/details/103483628" target="_blank">
+        <span class="article-type type-1 float-none">原创</span>        matlab中的princomp()和pca()区别              </a> 
+    </h4>
+    <p class="content">
+      <a href="https://blog.csdn.net/foneone/article/details/103483628" target="_blank">
+        matlab2016b中利用PCA原理做降维的是princomp()，2017版本不清楚，由于实验需要，将2016b卸载了，换成了2018b然后这行语句就报错了，说princomp()已经没了，让我用pca替换。
+
+但是替换后，有一个问题就是当原始数组里面存在很多列0时，pca自动返回前10个主成...      </a>
+    </p>
+    <div class="info-box d-flex align-content-center">
+    <p>
+        <span class="date">
+        2019-12-10 21:56:19</span>
+                <span class="read-num"><img src="https://csdnimg.cn/release/phoenix/template/new_img/readCountWhite.png" alt="">433</span>
+                <span class="read-num"><img src="https://csdnimg.cn/release/phoenix/template/new_img/commentCountWhite.png" alt="">0</span>
+      </p>
+    </div>
+        </div>
+  <div class="article-item-box csdn-tracking-statistics" data-articleid="103395084">
+        <h4 class="">
+        <a href="https://blog.csdn.net/foneone/article/details/103395084" target="_blank">
+        <span class="article-type type-1 float-none">原创</span>        python 引用,浅拷贝,深拷贝              </a> 
+    </h4>
+    <p class="content">
+      <a href="https://blog.csdn.net/foneone/article/details/103395084" target="_blank">
+        引用
+
+当对象是不可变类型的时候，int、float、double、string、tuple（纯tuple），遇到“引用”问题时，虽然起初两个变量指向同一个内存地址，但是改变了其中一个值，并不会影响另外一个（会重新开辟内存地址）。
+
+当对象是可变类型的时候，list、dic，遇到“引用”问题，会一...      </a>
+    </p>
+    <div class="info-box d-flex align-content-center">
+    <p>
+        <span class="date">
+        2019-12-05 11:06:39</span>
+                <span class="read-num"><img src="https://csdnimg.cn/release/phoenix/template/new_img/readCountWhite.png" alt="">17</span>
+                <span class="read-num"><img src="https://csdnimg.cn/release/phoenix/template/new_img/commentCountWhite.png" alt="">0</span>
+      </p>
+    </div>
+        </div>
+  <div class="article-item-box csdn-tracking-statistics" data-articleid="103283644">
+        <h4 class="">
+        <a href="https://blog.csdn.net/foneone/article/details/103283644" target="_blank">
+        <span class="article-type type-1 float-none">原创</span>        cs224-assignment1              </a> 
+    </h4>
+    <p class="content">
+      <a href="https://blog.csdn.net/foneone/article/details/103283644" target="_blank">
+        其实作业很简单,但是头疼的问题是涉及到两个语料库的包，不太好下载。一个是NLTK中的语料库，一个是genism里面的“word2vec-google-news-300”。第一个能直接运行出来，第二个需要科学上网下载，为了方便使用，文末附链接。
+
+说明：我是个小白，代码可能不是简洁明了，仅作为自己的...      </a>
+    </p>
+    <div class="info-box d-flex align-content-center">
+    <p>
+        <span class="date">
+        2019-11-27 22:11:52</span>
+                <span class="read-num"><img src="https://csdnimg.cn/release/phoenix/template/new_img/readCountWhite.png" alt="">102</span>
+                <span class="read-num"><img src="https://csdnimg.cn/release/phoenix/template/new_img/commentCountWhite.png" alt="">3</span>
+      </p>
+    </div>
+        </div>
+  <div class="article-item-box csdn-tracking-statistics" data-articleid="103110183">
+        <h4 class="">
+        <a href="https://blog.csdn.net/foneone/article/details/103110183" target="_blank">
+        <span class="article-type type-1 float-none">原创</span>        TF-IDF 及代码（一种衡量关键词权重的算法）              </a> 
+    </h4>
+    <p class="content">
+      <a href="https://blog.csdn.net/foneone/article/details/103110183" target="_blank">
+        TF（Termfrequency）-词频，IDF（Inversedocumentfrequency）-逆文本频率
+
+TF-IDF是一种度量关键词权重的方法。主要的应用场景：（1）搜索（2）关键词提取（可用于文本分类）
+
+刚开始的时候利用的是词频来确定关键词的权重，即 词语在语料库中出现的频率。
+
+...      </a>
+    </p>
+    <div class="info-box d-flex align-content-center">
+    <p>
+        <span class="date">
+        2019-11-17 17:59:04</span>
+                <span class="read-num"><img src="https://csdnimg.cn/release/phoenix/template/new_img/readCountWhite.png" alt="">108</span>
+                <span class="read-num"><img src="https://csdnimg.cn/release/phoenix/template/new_img/commentCountWhite.png" alt="">0</span>
+      </p>
+    </div>
+        </div>
+  <div class="article-item-box csdn-tracking-statistics" data-articleid="103063945">
+        <h4 class="">
+        <a href="https://blog.csdn.net/foneone/article/details/103063945" target="_blank">
+        <span class="article-type type-1 float-none">原创</span>        解决tkinter.PhotoImage()仅支持gif等几种不常用的图片格式问题              </a> 
+    </h4>
+    <p class="content">
+      <a href="https://blog.csdn.net/foneone/article/details/103063945" target="_blank">
+        如果想用 &quot;.jpg&quot;文件格式，直接用下面的代码，会报“couldn&#039;t recognize data in image file &quot;C:\Users\happy\Desktop\test.jpg&quot;错误。
+
+
+photo = tk.PhotoIma...      </a>
+    </p>
+    <div class="info-box d-flex align-content-center">
+    <p>
+        <span class="date">
+        2019-11-14 11:19:56</span>
+                <span class="read-num"><img src="https://csdnimg.cn/release/phoenix/template/new_img/readCountWhite.png" alt="">532</span>
+                <span class="read-num"><img src="https://csdnimg.cn/release/phoenix/template/new_img/commentCountWhite.png" alt="">0</span>
+      </p>
+    </div>
+        </div>
+  <div class="article-item-box csdn-tracking-statistics" data-articleid="103055681">
+        <h4 class="">
+        <a href="https://blog.csdn.net/foneone/article/details/103055681" target="_blank">
+        <span class="article-type type-1 float-none">原创</span>        pandas 读文件(csv/excel)遇见的问题              </a> 
+    </h4>
+    <p class="content">
+      <a href="https://blog.csdn.net/foneone/article/details/103055681" target="_blank">
+        &#039;gbk&#039; codec can&#039;t decode byte 0xb1 in position 5: illegal multibyte sequence
+
+改成如下格式：
+
+
+import pandas as pd 
+path = &#039;C:\\....\\te...      </a>
+    </p>
+    <div class="info-box d-flex align-content-center">
+    <p>
+        <span class="date">
+        2019-11-13 19:33:31</span>
+                <span class="read-num"><img src="https://csdnimg.cn/release/phoenix/template/new_img/readCountWhite.png" alt="">19</span>
+                <span class="read-num"><img src="https://csdnimg.cn/release/phoenix/template/new_img/commentCountWhite.png" alt="">0</span>
+      </p>
+    </div>
+        </div>
+  <div class="article-item-box csdn-tracking-statistics" data-articleid="102923285">
+        <h4 class="">
+        <a href="https://blog.csdn.net/foneone/article/details/102923285" target="_blank">
+        <span class="article-type type-1 float-none">原创</span>        from sklearn.feature_extraction.text import CountVectorizer              </a> 
+    </h4>
+    <p class="content">
+      <a href="https://blog.csdn.net/foneone/article/details/102923285" target="_blank">
+        sklearn.feature_extraction类做文本特征提取，有CountVectorizer、TfidfVectorizer、TfidfTransformer、HashingVectorizer四种类。前两种常见。主要说CountVectorizer。
+
+    CountVectori...      </a>
+    </p>
+    <div class="info-box d-flex align-content-center">
+    <p>
+        <span class="date">
+        2019-11-05 20:40:43</span>
+                <span class="read-num"><img src="https://csdnimg.cn/release/phoenix/template/new_img/readCountWhite.png" alt="">917</span>
+                <span class="read-num"><img src="https://csdnimg.cn/release/phoenix/template/new_img/commentCountWhite.png" alt="">0</span>
+      </p>
+    </div>
+        </div>
+  <div class="article-item-box csdn-tracking-statistics" data-articleid="102885476">
+        <h4 class="">
+        <a href="https://blog.csdn.net/foneone/article/details/102885476" target="_blank">
+        <span class="article-type type-1 float-none">原创</span>        熵（Entropy） &amp; 条件熵 （Conditional Entropy） &amp; 相对熵（Relative Entropy）- 学习笔记              </a> 
+    </h4>
+    <p class="content">
+      <a href="https://blog.csdn.net/foneone/article/details/102885476" target="_blank">
+        信息熵（Entropy）：解决信息的度量问题
+
+一条信息的信息量与其不确定性有直接的关系，如果对一件事情了解的很多，那么信息少一些，也能知晓事情本身；反之，如果对事情没有一点了解，那么则需要大量信息来对事情进行知晓。因此，信息量就等于不确定性的多少。
+
+香农利用“比特（Bit）”来度量信息量，一个...      </a>
+    </p>
+    <div class="info-box d-flex align-content-center">
+    <p>
+        <span class="date">
+        2019-11-03 21:16:47</span>
+                <span class="read-num"><img src="https://csdnimg.cn/release/phoenix/template/new_img/readCountWhite.png" alt="">156</span>
+                <span class="read-num"><img src="https://csdnimg.cn/release/phoenix/template/new_img/commentCountWhite.png" alt="">0</span>
+      </p>
+    </div>
+        </div>
+  <div class="article-item-box csdn-tracking-statistics" data-articleid="102864261">
+        <h4 class="">
+        <a href="https://blog.csdn.net/foneone/article/details/102864261" target="_blank">
+        <span class="article-type type-1 float-none">原创</span>        word2vec------2019cs224N(Course One)              </a> 
+    </h4>
+    <p class="content">
+      <a href="https://blog.csdn.net/foneone/article/details/102864261" target="_blank">
+        第一节课的主要内容是以下几个方面：
+
+1，简单介绍了一下WordNet，以及NLTK。
+
+2，介绍了一下ont-hot编码方式，其最主要的问题是未给出词汇之间的内在联系，而且是稀疏矩阵的形式
+
+  2005年google提出建立单词相似性表来解决这个没有内在联系的问题，但是表格太大。
+
+3，由于o...      </a>
+    </p>
+    <div class="info-box d-flex align-content-center">
+    <p>
+        <span class="date">
+        2019-11-02 00:22:09</span>
+                <span class="read-num"><img src="https://csdnimg.cn/release/phoenix/template/new_img/readCountWhite.png" alt="">54</span>
+                <span class="read-num"><img src="https://csdnimg.cn/release/phoenix/template/new_img/commentCountWhite.png" alt="">0</span>
+      </p>
+    </div>
+        </div>
+  <div class="article-item-box csdn-tracking-statistics" data-articleid="102853045">
+        <h4 class="">
+        <a href="https://blog.csdn.net/foneone/article/details/102853045" target="_blank">
+        <span class="article-type type-2 float-none">转载</span>        【转载】-Bag of Words(词袋模型)              </a> 
+    </h4>
+    <p class="content">
+      <a href="https://blog.csdn.net/foneone/article/details/102853045" target="_blank">
+        转载自：https://blog.csdn.net/JYZ4MFC/article/details/81223572
+
+Bag of Words 即词袋模型，是对样本数据的一种表示方法，主要应用在 NLP(自然语言处理)和 IR(信息检索)领域，近年也开始在 CV（计算机视觉）发挥作用。
+
+该模型...      </a>
+    </p>
+    <div class="info-box d-flex align-content-center">
+    <p>
+        <span class="date">
+        2019-11-01 10:40:54</span>
+                <span class="read-num"><img src="https://csdnimg.cn/release/phoenix/template/new_img/readCountWhite.png" alt="">48</span>
+                <span class="read-num"><img src="https://csdnimg.cn/release/phoenix/template/new_img/commentCountWhite.png" alt="">0</span>
+      </p>
+    </div>
+        </div>
+  <div class="pagination-box" id="pageBox"></div>
+</div>
+    </main>
+    <aside class="blog_container_aside">
+	<!--主页引入-->
+
+    <div id="asideProfile" class="aside-box">
+    <div class="profile-intro d-flex">
+        <div class="avatar-box d-flex justify-content-center flex-column">
+            <a href="https://blog.csdn.net/foneone"  data-report-click='{"mod":"popu_379","dest":"https://blog.csdn.net/foneone","ab":"new"}'>
+                <img src="https://profile.csdnimg.cn/5/8/A/3_foneone" class="avatar_pic" username='foneone'>
+            </a>
+        </div>
+        <div class="user-info d-flex flex-column profile-intro-name-box">
+            <div>
+                                <a href="https://blog.csdn.net/foneone" class="" id="uid" title='Foneone' data-report-click='{"mod":"popu_379","dest":"https://blog.csdn.net/foneone","ab":"new"}' >
+                    <span class="name " username='foneone'>
+                        Foneone                    </span>
+                </a>
+                <span></span>
+                <span class="flag expert-blog"><span class="bubble">CSDN认证博客专家</span></span>
+                <span class="flag company-blog"><span class="bubble">CSDN认证企业博客</span></span>
+            </div>
+            <div class="profile-intro-name-boxFooter">
+                <span class="personal-home-page">码龄4年</span>
+            </div>
+        </div>
+    </div>
+    <div class="data-info d-flex item-tiling">
+                <dl class="text-center" title="71">
+                            <dt><a href="https://blog.csdn.net/foneone" data-report-query="t=1"><span class="count">71</span></a></dt>
+                <dd><a href="https://blog.csdn.net/foneone" data-report-query="t=1">原创</a></dd>
+                    </dl>
+        <dl class="text-center" id="fanBox" title="57">
+            <dt><span class="count" id="fan">57</span></dt>
+            <dd>粉丝</dd>
+        </dl>
+        <dl class="text-center" title="73">
+            <dt><span class="count">73</span></dt>
+            <dd>获赞</dd>
+        </dl>
+        <dl class="text-center" title="46">
+            <dt><span class="count">46</span></dt>
+            <dd>评论</dd>
+        </dl>
+        <dl class="text-center" style="min-width:58px" title="83541">  
+            <dt><span class="count">8万+</span></dt>
+            <dd>访问</dd>
+        </dl>
+    </div>
+    <div class="item-rank"></div>
+    <div class="data-info d-flex item-tiling">
+        <dl class="text-center" title="1486">
+            <dt><span class="count">1486</span></dt>
+            <dd>积分</dd>
+        </dl>
+        <dl class="text-center" title="309">
+            <dt><span class="count">309</span></dt>
+            <dd>收藏</dd>
+        </dl>
+        <dl class="text-center" title="6539">
+            <dt><span class="count">6539</span></dt>
+            <dd><a href="https://blog.csdn.net/rank/writing_rank" target="_blank">周排名</a></dd>
+        </dl>
+        <dl class="text-center" title="52029">
+            <dt><span class="count">5万+</span></dt>
+            <dd><a href="https://blog.csdn.net/rank/writing_rank_total" target="_blank">总排名</a></dd>
+        </dl>
+        <dl class="text-center" title="4级,点击查看等级说明">
+            <dt><a href="https://blog.csdn.net/home/help.html#level"  target="_blank">
+            <img class="level" src="https://csdnimg.cn/identity/blog4.png"/>            </a>
+            </dt>
+            <dd>等级</dd>
+        </dl>
+    </div>
+    <div class="aside-box-footer">
+                    <div class="badge-box d-flex">
+                <div class="badge d-flex">
+                                                                                                        <div class="icon-badge" title="持之以恒">
+                                    <div class="mouse-box">
+                                        <img src="https://csdnimg.cn/medal/chizhiyiheng@120.png" alt="">
+                                        <div class="icon-arrow"></div>
+                                    </div>
+                                    <div class="grade-detail-box">
+                                        <div class="pos-box">
+                                            <div class="left-box d-flex justify-content-center align-items-center flex-column">
+                                                <img src="https://csdnimg.cn/medal/chizhiyiheng@120.png" alt="">
+                                            </div>
+                                            <div class="right-box">
+                                                <div class="title">持之以恒</div>
+                                                <div class="desc">授予每个自然月内发布4篇或4篇以上原创或翻译IT博文的用户。不积跬步无以至千里，不积小流无以成江海，程序人生的精彩需要坚持不懈地积累！</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                                                                                                <div class="icon-badge" title="勤写标兵Lv4">
+                                    <div class="mouse-box">
+                                        <img src="https://csdnimg.cn/medal/qixiebiaobing4@120.png" alt="">
+                                        <div class="icon-arrow"></div>
+                                    </div>
+                                    <div class="grade-detail-box">
+                                        <div class="pos-box">
+                                            <div class="left-box d-flex justify-content-center align-items-center flex-column">
+                                                <img src="https://csdnimg.cn/medal/qixiebiaobing4@120.png" alt="">
+                                            </div>
+                                            <div class="right-box">
+                                                <div class="title">勤写标兵Lv4</div>
+                                                <div class="desc">授予每个自然周发布9篇以上（包括9篇）原创IT博文的用户。本勋章将于次周周三上午根据用户上周的博文发布情况由系统自动颁发。</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                                                                        </div>
+                <script>
+                    (function($) {
+                        setTimeout(function() {
+                            $('div.icon-badge.show-moment').removeClass('show-moment');
+                        }, 5000);
+                    })(window.jQuery)
+                </script>
+            </div>
+                
+    </div>
+        <div class="profile-intro-name-boxOpration">
+        <div class='opt-letter-watch-box'>
+            <a class="bt-button personal-letter" href="https://me.csdn.net/foneone" target="_blank" rel="noopener">TA的主页</a>
+        </div>
+        <div class='opt-letter-watch-box'>
+            <a class="bt-button personal-letter" href=https://im.csdn.net/im/main.html?userName=foneone target="_blank" rel="noopener">私信</a>
+        </div>
+        <div class="opt-letter-watch-box">
+                            <a class="personal-watch bt-button" id="btnAttent" data-report-click='{"mod":"popu_379","ab":"new"}'>关注</a>
+                    </div>
+    </div>
+    </div>
+<script>
+    function watchBtnChange(flag, username) {
+        $('span.blog-expert-button-follow').each(function(index) {
+            if (flag) {
+                if ($(this).attr("data-name") == username) {
+                    $(this).html('<span class="hover-hide">已关注</span><span class="hover-show">取消</span>').removeClass('btn-red-follow').addClass('btn-gray-follow attented');
+                }
+            } else {
+                if ($(this).attr("data-name") == username) {
+                    $(this).html("关注").addClass('btn-red-follow').removeClass('btn-gray-follow attented');
+                }
+            }
+        })
+        if (username == $('p.csdn-tracking-statistics').attr("username")) {
+            if (flag) {
+                $('#btnAttent').addClass("attented").text("已关注").removeClass('btn-red-hollow').addClass('btn-gray-hollow');
+                changeFans(1)
+            } else {
+                $('#btnAttent').text("关注").addClass('btn-red-hollow').removeClass('btn-gray-hollow attented');
+                changeFans(-1)
+            }
+        }
+
+    }
+
+    function changeFans(num) {
+        if ($('#fan').text().indexOf('+') < 0) {
+            $('#fan').text(parseInt($('#fan').text()) + num);
+        } else {
+            $('#fanBox').attr('title', parseInt($('#fanBox').attr('title')) + num);
+        }
+    }
+    window.csdn = window.csdn ? window.csdn : {};
+    window.csdn.watchBtnChange = watchBtnChange;
+</script><div class="csdn-tracking-statistics mb8 box-shadow" data-pid="blog" style="height:250px;">
+    <div class="aside-content text-center" id="cpro_u2734133">
+        <div id="kp_box_56" data-pid="56"><script  data-ad-client="ca-pub-1076724771190722" async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- 博客内页左上视窗-20181120 -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-1076724771190722"
+     data-ad-slot="7700527946"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script><img class="pre-img-lasy" data-src="https://kunyu.csdn.net/1.png?p=56&a=703&c=0&k=&d=1&t=3&u=bc69bd277e0b4f30a692a2f976e46783"></div>    </div>
+</div>
+<div id="asideNewArticle" class="aside-box">
+    <h3 class="aside-title">最新文章</h3>
+    <div class="aside-content">
+        <ul class="inf_list clearfix">
+                        <li class="clearfix">
+                <a data-report-click='{"mod":"popu_382","dest":"https://blog.csdn.net/foneone/article/details/105855367","ab":"new"}' href="https://blog.csdn.net/foneone/article/details/105855367" target="_blank" >
+                                        遗传算法（GA）中的编码方式-二进制编码、格雷编码、实数编码                </a>
+            </li>
+                        <li class="clearfix">
+                <a data-report-click='{"mod":"popu_382","dest":"https://blog.csdn.net/foneone/article/details/105383678","ab":"new"}' href="https://blog.csdn.net/foneone/article/details/105383678" target="_blank" >
+                                        Python— * 和 ** 的区别和作用                </a>
+            </li>
+                        <li class="clearfix">
+                <a data-report-click='{"mod":"popu_382","dest":"https://blog.csdn.net/foneone/article/details/105383714","ab":"new"}' href="https://blog.csdn.net/foneone/article/details/105383714" target="_blank" >
+                                        Pyhon-列表切片操作                </a>
+            </li>
+                        <li class="clearfix">
+                <a data-report-click='{"mod":"popu_382","dest":"https://blog.csdn.net/foneone/article/details/105383649","ab":"new"}' href="https://blog.csdn.net/foneone/article/details/105383649" target="_blank" >
+                                        Python-字典的增删改查常见操作                </a>
+            </li>
+                        <li class="clearfix">
+                <a data-report-click='{"mod":"popu_382","dest":"https://blog.csdn.net/foneone/article/details/105372859","ab":"new"}' href="https://blog.csdn.net/foneone/article/details/105372859" target="_blank" >
+                                        Phyhon-内置函数zip()                </a>
+            </li>
+                    </ul>
+    </div>
+</div>
+    <div id="asideCategory" class="aside-box flexible-box"
+         style="display:block!important;">
+    <h3 class="aside-title">分类专栏</h3>
+    <div class="aside-content">
+        <ul>
+                            <li class="">
+                                        <a class="clearfix" 
+                                                    data-report-click='{"mod":"popu_537","strategy":"","dest":"https://blog.csdn.net/foneone/category_9706755.html","ab":"new"}'
+                            data-report-view='{"mod":"popu_537","strategy":"","dest":"https://blog.csdn.net/foneone/category_9706755.html","ab":"new"}'
+                                               href="https://blog.csdn.net/foneone/category_9706755.html">
+                                                    <img src="https://img-blog.csdnimg.cn/20190927151117521.png" alt="">
+                                                <!--####是否付费-->
+                        <span class="title oneline"><span class="text">刷题</span>
+                                                    </span>
+                        <!--####是否付费-->
+                                                    <span class="count float-right">8篇</span>
+                                            </a>
+                </li>
+                            <li class="">
+                                        <a class="clearfix" 
+                                                    data-report-click='{"mod":"popu_537","strategy":"","dest":"https://blog.csdn.net/foneone/category_9473029.html","ab":"new"}'
+                            data-report-view='{"mod":"popu_537","strategy":"","dest":"https://blog.csdn.net/foneone/category_9473029.html","ab":"new"}'
+                                               href="https://blog.csdn.net/foneone/category_9473029.html">
+                                                    <img src="https://img-blog.csdnimg.cn/20190927151101105.png" alt="">
+                                                <!--####是否付费-->
+                        <span class="title oneline"><span class="text">NLP</span>
+                                                    </span>
+                        <!--####是否付费-->
+                                                    <span class="count float-right">8篇</span>
+                                            </a>
+                </li>
+                            <li class="">
+                                        <a class="clearfix" 
+                                                    data-report-click='{"mod":"popu_537","strategy":"","dest":"https://blog.csdn.net/foneone/category_9645761.html","ab":"new"}'
+                            data-report-view='{"mod":"popu_537","strategy":"","dest":"https://blog.csdn.net/foneone/category_9645761.html","ab":"new"}'
+                                               href="https://blog.csdn.net/foneone/category_9645761.html">
+                                                    <img src="https://img-blog.csdnimg.cn/2019091813595558.png" alt="">
+                                                <!--####是否付费-->
+                        <span class="title oneline"><span class="text">linux</span>
+                                                    </span>
+                        <!--####是否付费-->
+                                            </a>
+                </li>
+                            <li class="">
+                                        <a class="clearfix" 
+                                                    data-report-click='{"mod":"popu_537","strategy":"","dest":"https://blog.csdn.net/foneone/category_9487908.html","ab":"new"}'
+                            data-report-view='{"mod":"popu_537","strategy":"","dest":"https://blog.csdn.net/foneone/category_9487908.html","ab":"new"}'
+                                               href="https://blog.csdn.net/foneone/category_9487908.html">
+                                                    <img src="https://img-blog.csdnimg.cn/20190927151101105.png" alt="">
+                                                <!--####是否付费-->
+                        <span class="title oneline"><span class="text">sklearn</span>
+                                                    </span>
+                        <!--####是否付费-->
+                                                    <span class="count float-right">1篇</span>
+                                            </a>
+                </li>
+                            <li class="">
+                                        <a class="clearfix" 
+                                                    data-report-click='{"mod":"popu_537","strategy":"","dest":"https://blog.csdn.net/foneone/category_9411140.html","ab":"new"}'
+                            data-report-view='{"mod":"popu_537","strategy":"","dest":"https://blog.csdn.net/foneone/category_9411140.html","ab":"new"}'
+                                               href="https://blog.csdn.net/foneone/category_9411140.html">
+                                                    <img src="https://img-blog.csdnimg.cn/2019091813595558.png" alt="">
+                                                <!--####是否付费-->
+                        <span class="title oneline"><span class="text">matplotlib</span>
+                                                    </span>
+                        <!--####是否付费-->
+                                            </a>
+                </li>
+                            <li class="">
+                                        <a class="clearfix" 
+                                                    data-report-click='{"mod":"popu_537","strategy":"","dest":"https://blog.csdn.net/foneone/category_8232497.html","ab":"new"}'
+                            data-report-view='{"mod":"popu_537","strategy":"","dest":"https://blog.csdn.net/foneone/category_8232497.html","ab":"new"}'
+                                               href="https://blog.csdn.net/foneone/category_8232497.html">
+                                                    <img src="https://img-blog.csdnimg.cn/20190927151124774.png" alt="">
+                                                <!--####是否付费-->
+                        <span class="title oneline"><span class="text">平时工作问题记录</span>
+                                                    </span>
+                        <!--####是否付费-->
+                                                    <span class="count float-right">24篇</span>
+                                            </a>
+                </li>
+                            <li class="">
+                                        <a class="clearfix" 
+                                                    data-report-click='{"mod":"popu_537","strategy":"","dest":"https://blog.csdn.net/foneone/category_8232517.html","ab":"new"}'
+                            data-report-view='{"mod":"popu_537","strategy":"","dest":"https://blog.csdn.net/foneone/category_8232517.html","ab":"new"}'
+                                               href="https://blog.csdn.net/foneone/category_8232517.html">
+                                                    <img src="https://img-blog.csdnimg.cn/20190927151101105.png" alt="">
+                                                <!--####是否付费-->
+                        <span class="title oneline"><span class="text">机器学习</span>
+                                                    </span>
+                        <!--####是否付费-->
+                                                    <span class="count float-right">7篇</span>
+                                            </a>
+                </li>
+                            <li class="">
+                                        <a class="clearfix" 
+                                                    data-report-click='{"mod":"popu_537","strategy":"","dest":"https://blog.csdn.net/foneone/category_8341368.html","ab":"new"}'
+                            data-report-view='{"mod":"popu_537","strategy":"","dest":"https://blog.csdn.net/foneone/category_8341368.html","ab":"new"}'
+                                               href="https://blog.csdn.net/foneone/category_8341368.html">
+                                                    <img src="https://img-blog.csdnimg.cn/20190918135101160.png" alt="">
+                                                <!--####是否付费-->
+                        <span class="title oneline"><span class="text">pytorch</span>
+                                                    </span>
+                        <!--####是否付费-->
+                                                    <span class="count float-right">12篇</span>
+                                            </a>
+                </li>
+                            <li class="">
+                                        <a class="clearfix" 
+                                                    data-report-click='{"mod":"popu_537","strategy":"","dest":"https://blog.csdn.net/foneone/category_8835971.html","ab":"new"}'
+                            data-report-view='{"mod":"popu_537","strategy":"","dest":"https://blog.csdn.net/foneone/category_8835971.html","ab":"new"}'
+                                               href="https://blog.csdn.net/foneone/category_8835971.html">
+                                                    <img src="https://img-blog.csdnimg.cn/2019091813595558.png" alt="">
+                                                <!--####是否付费-->
+                        <span class="title oneline"><span class="text">tkinter</span>
+                                                    </span>
+                        <!--####是否付费-->
+                                                    <span class="count float-right">6篇</span>
+                                            </a>
+                </li>
+                            <li class="">
+                                        <a class="clearfix" 
+                                                    data-report-click='{"mod":"popu_537","strategy":"","dest":"https://blog.csdn.net/foneone/category_8838282.html","ab":"new"}'
+                            data-report-view='{"mod":"popu_537","strategy":"","dest":"https://blog.csdn.net/foneone/category_8838282.html","ab":"new"}'
+                                               href="https://blog.csdn.net/foneone/category_8838282.html">
+                                                    <img src="https://img-blog.csdnimg.cn/20190918140037908.png" alt="">
+                                                <!--####是否付费-->
+                        <span class="title oneline"><span class="text">numpy</span>
+                                                    </span>
+                        <!--####是否付费-->
+                                                    <span class="count float-right">1篇</span>
+                                            </a>
+                </li>
+                            <li class="">
+                                        <a class="clearfix" 
+                                                    data-report-click='{"mod":"popu_537","strategy":"","dest":"https://blog.csdn.net/foneone/category_8932852.html","ab":"new"}'
+                            data-report-view='{"mod":"popu_537","strategy":"","dest":"https://blog.csdn.net/foneone/category_8932852.html","ab":"new"}'
+                                               href="https://blog.csdn.net/foneone/category_8932852.html">
+                                                    <img src="https://img-blog.csdnimg.cn/20190927151053287.png" alt="">
+                                                <!--####是否付费-->
+                        <span class="title oneline"><span class="text">机器学习理论学习</span>
+                                                    </span>
+                        <!--####是否付费-->
+                                                    <span class="count float-right">13篇</span>
+                                            </a>
+                </li>
+                    </ul>
+    </div>
+        <p class="text-center">
+        <a class="flexible-btn" data-fbox="aside-archive"><img class="look-more" src="https://csdnimg.cn/release/phoenix/template/new_img/arrowDownWhite.png" alt=""></a>
+    </p>
+    </div>
+<div id="asideArchive" class="aside-box">
+    <h3 class="aside-title">归档</h3>
+    <div class="aside-content">
+        <div class="archive-box">
+                        <div class="archive-title">2020</div>
+            <div class="archive-content">
+                                    <div class="archive-item">
+                        <a href="https://blog.csdn.net/foneone/article/month/2020/05" target="_blank" data-report-click='{"mod":"popu_538","ab":"new","dest":""}' data-report-view='{"mod":"popu_538","ab":"new","dest":""}'>
+                        <span class="time">5月</span>
+                        <span class="count">1篇</span>
+                        </a>
+                    </div>
+                                    <div class="archive-item">
+                        <a href="https://blog.csdn.net/foneone/article/month/2020/04" target="_blank" data-report-click='{"mod":"popu_538","ab":"new","dest":""}' data-report-view='{"mod":"popu_538","ab":"new","dest":""}'>
+                        <span class="time">4月</span>
+                        <span class="count">4篇</span>
+                        </a>
+                    </div>
+                                    <div class="archive-item">
+                        <a href="https://blog.csdn.net/foneone/article/month/2020/03" target="_blank" data-report-click='{"mod":"popu_538","ab":"new","dest":""}' data-report-view='{"mod":"popu_538","ab":"new","dest":""}'>
+                        <span class="time">3月</span>
+                        <span class="count">5篇</span>
+                        </a>
+                    </div>
+                                    <div class="archive-item">
+                        <a href="https://blog.csdn.net/foneone/article/month/2020/02" target="_blank" data-report-click='{"mod":"popu_538","ab":"new","dest":""}' data-report-view='{"mod":"popu_538","ab":"new","dest":""}'>
+                        <span class="time">2月</span>
+                        <span class="count">7篇</span>
+                        </a>
+                    </div>
+                                    <div class="archive-item">
+                        <a href="https://blog.csdn.net/foneone/article/month/2020/01" target="_blank" data-report-click='{"mod":"popu_538","ab":"new","dest":""}' data-report-view='{"mod":"popu_538","ab":"new","dest":""}'>
+                        <span class="time">1月</span>
+                        <span class="count">11篇</span>
+                        </a>
+                    </div>
+                            </div>
+                        <div class="archive-title">2019</div>
+            <div class="archive-content">
+                                    <div class="archive-item">
+                        <a href="https://blog.csdn.net/foneone/article/month/2019/12" target="_blank" data-report-click='{"mod":"popu_538","ab":"new","dest":""}' data-report-view='{"mod":"popu_538","ab":"new","dest":""}'>
+                        <span class="time">12月</span>
+                        <span class="count">4篇</span>
+                        </a>
+                    </div>
+                                    <div class="archive-item">
+                        <a href="https://blog.csdn.net/foneone/article/month/2019/11" target="_blank" data-report-click='{"mod":"popu_538","ab":"new","dest":""}' data-report-view='{"mod":"popu_538","ab":"new","dest":""}'>
+                        <span class="time">11月</span>
+                        <span class="count">8篇</span>
+                        </a>
+                    </div>
+                                    <div class="archive-item">
+                        <a href="https://blog.csdn.net/foneone/article/month/2019/10" target="_blank" data-report-click='{"mod":"popu_538","ab":"new","dest":""}' data-report-view='{"mod":"popu_538","ab":"new","dest":""}'>
+                        <span class="time">10月</span>
+                        <span class="count">3篇</span>
+                        </a>
+                    </div>
+                                    <div class="archive-item">
+                        <a href="https://blog.csdn.net/foneone/article/month/2019/09" target="_blank" data-report-click='{"mod":"popu_538","ab":"new","dest":""}' data-report-view='{"mod":"popu_538","ab":"new","dest":""}'>
+                        <span class="time">9月</span>
+                        <span class="count">4篇</span>
+                        </a>
+                    </div>
+                                    <div class="archive-item">
+                        <a href="https://blog.csdn.net/foneone/article/month/2019/08" target="_blank" data-report-click='{"mod":"popu_538","ab":"new","dest":""}' data-report-view='{"mod":"popu_538","ab":"new","dest":""}'>
+                        <span class="time">8月</span>
+                        <span class="count">1篇</span>
+                        </a>
+                    </div>
+                                    <div class="archive-item">
+                        <a href="https://blog.csdn.net/foneone/article/month/2019/07" target="_blank" data-report-click='{"mod":"popu_538","ab":"new","dest":""}' data-report-view='{"mod":"popu_538","ab":"new","dest":""}'>
+                        <span class="time">7月</span>
+                        <span class="count">4篇</span>
+                        </a>
+                    </div>
+                                    <div class="archive-item">
+                        <a href="https://blog.csdn.net/foneone/article/month/2019/06" target="_blank" data-report-click='{"mod":"popu_538","ab":"new","dest":""}' data-report-view='{"mod":"popu_538","ab":"new","dest":""}'>
+                        <span class="time">6月</span>
+                        <span class="count">4篇</span>
+                        </a>
+                    </div>
+                                    <div class="archive-item">
+                        <a href="https://blog.csdn.net/foneone/article/month/2019/05" target="_blank" data-report-click='{"mod":"popu_538","ab":"new","dest":""}' data-report-view='{"mod":"popu_538","ab":"new","dest":""}'>
+                        <span class="time">5月</span>
+                        <span class="count">3篇</span>
+                        </a>
+                    </div>
+                                    <div class="archive-item">
+                        <a href="https://blog.csdn.net/foneone/article/month/2019/04" target="_blank" data-report-click='{"mod":"popu_538","ab":"new","dest":""}' data-report-view='{"mod":"popu_538","ab":"new","dest":""}'>
+                        <span class="time">4月</span>
+                        <span class="count">3篇</span>
+                        </a>
+                    </div>
+                                    <div class="archive-item">
+                        <a href="https://blog.csdn.net/foneone/article/month/2019/03" target="_blank" data-report-click='{"mod":"popu_538","ab":"new","dest":""}' data-report-view='{"mod":"popu_538","ab":"new","dest":""}'>
+                        <span class="time">3月</span>
+                        <span class="count">5篇</span>
+                        </a>
+                    </div>
+                                    <div class="archive-item">
+                        <a href="https://blog.csdn.net/foneone/article/month/2019/01" target="_blank" data-report-click='{"mod":"popu_538","ab":"new","dest":""}' data-report-view='{"mod":"popu_538","ab":"new","dest":""}'>
+                        <span class="time">1月</span>
+                        <span class="count">2篇</span>
+                        </a>
+                    </div>
+                            </div>
+                        <div class="archive-title">2018</div>
+            <div class="archive-content">
+                                    <div class="archive-item">
+                        <a href="https://blog.csdn.net/foneone/article/month/2018/11" target="_blank" data-report-click='{"mod":"popu_538","ab":"new","dest":""}' data-report-view='{"mod":"popu_538","ab":"new","dest":""}'>
+                        <span class="time">11月</span>
+                        <span class="count">5篇</span>
+                        </a>
+                    </div>
+                                    <div class="archive-item">
+                        <a href="https://blog.csdn.net/foneone/article/month/2018/10" target="_blank" data-report-click='{"mod":"popu_538","ab":"new","dest":""}' data-report-view='{"mod":"popu_538","ab":"new","dest":""}'>
+                        <span class="time">10月</span>
+                        <span class="count">5篇</span>
+                        </a>
+                    </div>
+                            </div>
+                    </div>
+    </div>
+</div>
+<div id="asideHotArticle" class="aside-box">
+	<h3 class="aside-title">热门文章</h3>
+	<div class="aside-content">
+		<ul class="hotArticle-list">
+							<li>
+
+                    <a
+                    data-report-click='{"mod":"popu_541","dest":"https://blog.csdn.net/foneone/article/details/90141213","ab":"new"}' 
+                     href="https://blog.csdn.net/foneone/article/details/90141213" >
+                                                时间序列模型（ARIMA和ARMA）完整步骤详述                        <img src="https://csdnimg.cn/release/phoenix/template/new_img/readCountWhite.png" alt=""><span class="read">23237</span>
+                    </a>
+				</li>
+							<li>
+
+                    <a
+                    data-report-click='{"mod":"popu_541","dest":"https://blog.csdn.net/foneone/article/details/96576990","ab":"new"}' 
+                     href="https://blog.csdn.net/foneone/article/details/96576990" >
+                                                回归问题-Lasso回归                        <img src="https://csdnimg.cn/release/phoenix/template/new_img/readCountWhite.png" alt=""><span class="read">8030</span>
+                    </a>
+				</li>
+							<li>
+
+                    <a
+                    data-report-click='{"mod":"popu_541","dest":"https://blog.csdn.net/foneone/article/details/83502137","ab":"new"}' 
+                     href="https://blog.csdn.net/foneone/article/details/83502137" >
+                                                记录 python-tkinter包利用Label插入图片（一）                        <img src="https://csdnimg.cn/release/phoenix/template/new_img/readCountWhite.png" alt=""><span class="read">7002</span>
+                    </a>
+				</li>
+							<li>
+
+                    <a
+                    data-report-click='{"mod":"popu_541","dest":"https://blog.csdn.net/foneone/article/details/100763985","ab":"new"}' 
+                     href="https://blog.csdn.net/foneone/article/details/100763985" >
+                                                记录 python-tkinter包利用tkinter.font设置文本框字体                        <img src="https://csdnimg.cn/release/phoenix/template/new_img/readCountWhite.png" alt=""><span class="read">5577</span>
+                    </a>
+				</li>
+							<li>
+
+                    <a
+                    data-report-click='{"mod":"popu_541","dest":"https://blog.csdn.net/foneone/article/details/100915340","ab":"new"}' 
+                     href="https://blog.csdn.net/foneone/article/details/100915340" >
+                                                记录python-tkinter包 Text控件中的更改文字颜色大小操作                        <img src="https://csdnimg.cn/release/phoenix/template/new_img/readCountWhite.png" alt=""><span class="read">2883</span>
+                    </a>
+				</li>
+					</ul>
+	</div>
+</div>
+<div id="asideNewComments" class="aside-box">
+    <h3 class="aside-title">最新评论</h3>
+    <div class="aside-content">
+        <ul class="newcomment-list">
+                        <li>
+                <a class="title text-truncate" data-report-click='{"mod":"popu_542","dest":"https://blog.csdn.net/foneone/article/details/104445320#comments","ab":"new"}'  target="_blank" href="https://blog.csdn.net/foneone/article/details/104445320#comments">pytorch - K折交叉验证过...</a>
+                <p class="comment ellipsis">
+                    <a href="https://my.csdn.net/all4win1995" class="user-name" target="_blank">all4win1995：</a>[reply]foneone[/reply]好吧。。谢谢。然而我迁移到自己代码的时候报了其他地方的错。。。貌似是test_ls里的result = torch.max(output,1)[1].view(y.size())。。说维度不匹配。。然而train_ls里是没问题的。。搞得我有点懵                </p>
+            </li>
+                        <li>
+                <a class="title text-truncate" data-report-click='{"mod":"popu_542","dest":"https://blog.csdn.net/foneone/article/details/104445320#comments","ab":"new"}'  target="_blank" href="https://blog.csdn.net/foneone/article/details/104445320#comments">pytorch - K折交叉验证过...</a>
+                <p class="comment ellipsis">
+                    <a href="https://my.csdn.net/foneone" class="user-name" target="_blank">foneone：</a>[reply]all4win1995[/reply]当时想的是每折都要进行num_epochs次迭代，然后每次会产生一个trainloss ，然后输出的时候只选择了最后一次迭代的train loss 值..                </p>
+            </li>
+                        <li>
+                <a class="title text-truncate" data-report-click='{"mod":"popu_542","dest":"https://blog.csdn.net/foneone/article/details/104445320#comments","ab":"new"}'  target="_blank" href="https://blog.csdn.net/foneone/article/details/104445320#comments">pytorch - K折交叉验证过...</a>
+                <p class="comment ellipsis">
+                    <a href="https://my.csdn.net/all4win1995" class="user-name" target="_blank">all4win1995：</a>[code=python]
+ print(&#039;train_loss:%.6f&#039;%train_ls[-1][0],&#039;train_acc:%.4f\n&#039;%valid_ls[-1][1],\
+              &#039;valid loss:%.6f&#039;%valid_ls[-1][0],&#039;valid_acc:%.4f&#039;%valid_ls[-1][1])
+[/code]
+你好。。有点没搞懂这段。。。train返回了train ls 和 vail ls，train_ls里面不是只有train的loss和acc两个东西吗。。为什么实际打印loss的时候还要前面加上[-1]再接[0]和[1]啊？                </p>
+            </li>
+                        <li>
+                <a class="title text-truncate" data-report-click='{"mod":"popu_542","dest":"https://blog.csdn.net/foneone/article/details/90141213#comments","ab":"new"}'  target="_blank" href="https://blog.csdn.net/foneone/article/details/90141213#comments">时间序列模型（ARIMA和ARMA...</a>
+                <p class="comment ellipsis">
+                    <a href="https://my.csdn.net/weixin_43925005" class="user-name" target="_blank">weixin_43925005：</a>你好,请问 def ARIMA_model(train_H,train,test)这个函数中,train_H是重采样之前的数据集data，train是重采样后的数据data_train，test是train样本外的数据data_train吗?                </p>
+            </li>
+                        <li>
+                <a class="title text-truncate" data-report-click='{"mod":"popu_542","dest":"https://blog.csdn.net/foneone/article/details/103811328#comments","ab":"new"}'  target="_blank" href="https://blog.csdn.net/foneone/article/details/103811328#comments">BPE(Byte Pair Enc...</a>
+                <p class="comment ellipsis">
+                    <a href="https://my.csdn.net/wenwenr" class="user-name" target="_blank">wenwenr：</a>p = re.compile(r&#039;(?&lt;!\S)&#039; + bigram + r&#039;(?!\S)&#039;) 为什么是(?&lt;!\S)啊？这个的含义是前后都是空的（也没有空格键）吗？                </p>
+            </li>
+                    </ul>
+    </div>
+</div>
+            <div id="footerRightAds">
+        <div class="aside-box">
+            <div id="kp_box_57" data-pid="57"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- 博客内页左下视窗-20181130 -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-1076724771190722"
+     data-ad-slot="1894159733"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script><img class="pre-img-lasy" data-src="https://kunyu.csdn.net/1.png?p=57&a=707&c=0&k=&d=1&t=3&u=32e5701d879340dbbccbd4bb5f236ace"></div>        </div>
+        </div>
+        <!-- 详情页显示目录 -->
+    	<div id="asideFooter">
+		<div class="aside-box">
+			<div class="persion_article">
+			</div>
+		</div>
+	</div>
+</aside>
+<script src="https://csdnimg.cn/pubfooter/js/publib_footer-1.0.3.js" data-isfootertrack="false" type="text/javascript"></script>
+<script>
+	$("a.flexible-btn").click(function(){
+		$(this).parents('div.aside-box').removeClass('flexible-box');
+		$(this).parents("p.text-center").remove();
+	})
+</script>
+<script type="text/javascript"  src="https://g.csdnimg.cn/user-tooltip/2.1/user-tooltip.js"></script>
+</div>
+<div class="mask"></div>
+<div class="promptBox clearfix">
+    <div class="title clearfix bottom-dis-16">
+        <span class="float-left">提示</span>
+        <a class="float-right Boxclose">
+            <svg class="icon" aria-hidden="true">
+                <use xlink:href="#csdnc-times"></use>
+            </svg>
+        </a>
+    </div>
+    <div class="text">确定要删除当前文章？</div>
+    <div class="pro-btn float-right">
+        <a class="clickNo">取消</a>
+        <a class="clickYes">删除</a>
+    </div>
+</div>
+<script>
+    var currentPage = 1;
+    var baseUrl = 'https://blog.csdn.net/foneone//article/list' ;
+    var pageSize = 40 ;
+    var listTotal = 79 ;
+    var pageQueryStr = '';
+    function getAllUrl(page) {
+        return baseUrl + "/" + page + pageQueryStr;
+    }
+    </script>
+<script type="text/javascript"  src="https://g.csdnimg.cn/??login-box/1.1.1/30/login-box.js,login-box/1.1.1/30/login-auto.js"></script>
+
+<script src="https://csdnimg.cn/release/phoenix/vendor/pagination/paging-3d3b805766.js"></script>
+<script src="https://csdnimg.cn/release/phoenix/vendor/iconfont/csdnc-c439e66521.js"></script>
+<script src="https://csdnimg.cn/release/phoenix/template/new_js/common-ae342f3be4.min.js"></script>
+<script src="https://csdnimg.cn/release/phoenix/template/new_js/list-7c51275791.min.js"></script>
+
+
+<script>
+    
+</script>
+</body>
+</html>
