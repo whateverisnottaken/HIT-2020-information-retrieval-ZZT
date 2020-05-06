@@ -10,6 +10,7 @@ import tkinter.font
 import threading
 import queue
 import random
+import pyltp
 
 gui_que = queue.Queue()
 
