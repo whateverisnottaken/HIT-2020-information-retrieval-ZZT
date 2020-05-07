@@ -4,7 +4,7 @@ __author__ = 'Zhaozitian'
 
 import Handle
 import Segment
-#import JsonGenerate
+import JsonGenerate
 from tkinter import *
 import tkinter as tk
 import tkinter.messagebox as messagebox
@@ -87,10 +87,7 @@ class Generator(threading.Thread):
 			self.frm_bottom_label.config(text=self.progress)
 
 	def jsonGenerate(self):
-		print(2)
-		if flag == 0:
-		 	messagebox.showwarning('Warning', 'You have not downloaded the resources.\nPlease download first.')
-		self.frm_bottom_label.config(text=self.progress)
+		JsonGenerate.json_generate('F:/news')
 
 	def segment(self):
 		Segment.process('F:/news')
