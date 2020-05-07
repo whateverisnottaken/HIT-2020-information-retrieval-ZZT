@@ -14,11 +14,11 @@ visited = set()
 cnt = 0
 
 class Handle(threading.Thread):
-	def __init__(self, queue, opener, blog_name):
+	def __init__(self, queue, opener, news_name):
 		threading.Thread.__init__(self)
 		self.queue = queue
 		self.opener = opener
-		self.blog_name = blog_name
+		self.news_name = news_name
 		self.lock = threading.Lock()
 
 	def save_data(self, data, filename):
@@ -35,9 +35,10 @@ class Handle(threading.Thread):
 		data = data.decode('utf-8')
 		begin = data.find('title') + 6
 		end = str(data).find('\r\n',begin)
-		if end > begin + 10:
-			end = begin + 10
-		title = str(cnt)
+		if end > begin + 30:
+			end = begin + 30
+		title = data[begin:end]
+		#title = str(cnt)
 		return title
 
 	def run(self):
@@ -65,21 +66,22 @@ class Handle(threading.Thread):
 			self.save_data(data,title)
 
 			data = data.decode('utf-8')
-			blog_urls = re.compile('/' + self.blog_name + '/article/details/' + '\d*')
-			for url in blog_urls.findall(data):
-				url = 'http://blog.csdn.net' + url
+			news_urls = re.compile('/' + self.news_name + '/' + '\d*' + '/' + '\S*' + '/page.htm')
+			for url in news_urls.findall(data):
+				print(url)
+				url = 'http://hitgs.hit.edu.cn' + url
 				if url not in visited:
 					self.queue.put(url)
 					visited |= {url}
-					# print('加入队列---》' + url)
+					print('加入队列---》' + url)
 			self.queue.task_done()
 
-def init(name, number=10):
+def init(startTime, number=10):
 	global cnt
 	global visited
-	blog_name = name.lower()
+	news_name = startTime.lower()
 	th_num = int(number)
-	url = 'http://blog.csdn.net/' + blog_name + '/'
+	url = 'http://hitgs.hit.edu.cn/tzgg/list.htm'
 	opener = urllib.request.build_opener(urllib.request.HTTPHandler)
 	headers = [
 		('User-Agent', 'Mozilla/5.0 (Windows NT 6.3; WOW64; Trident/7.0; rv:11.0) like Gecko')
@@ -92,7 +94,7 @@ def init(name, number=10):
 	cnt = 0
 
 	for i in range(th_num):
-		t = Handle(queue,opener,blog_name)
+		t = Handle(queue,opener,news_name)
 		t.setDaemon(True)
 		t.start()
 	queue.join()

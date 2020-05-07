@@ -3,7 +3,7 @@
 __author__ = 'Zhaozitian'
 
 import Handle
-#import Segment
+import Segment
 #import JsonGenerate
 from tkinter import *
 import tkinter as tk
@@ -18,7 +18,7 @@ gui_que = queue.Queue()
 class Generator(threading.Thread):
 
 	flag = 0
-
+	
 	def __init__(self, root):
 		threading.Thread.__init__(self)
 		self.progress = ''
@@ -59,7 +59,7 @@ class Generator(threading.Thread):
 		self.frm_button_download = tk.Button(self.frm, text='    Download     ', command=self.download, font=('stencil', 11), background = 'green', foreground = 'white')
 		self.frm_button_download.grid(row=3, column=1, padx=25, pady=10)
 
-		self.frm_button_process = tk.Button(self.frm, text=' NLP Process ', command=self.nlpProcess, font=('stencil', 11), background = 'blue', foreground = 'white')
+		self.frm_button_process = tk.Button(self.frm, text=' NLP Process ', command=self.segment, font=('stencil', 11), background = 'blue', foreground = 'white')
 		self.frm_button_process.grid(row=4, column=0, padx=25, pady=10)
 
 		self.frm_button_generate = tk.Button(self.frm, text='json Generate', command=self.jsonGenerate, font=('stencil', 11), background = 'dark orange', foreground = 'white')
@@ -70,19 +70,19 @@ class Generator(threading.Thread):
 		self.frm_bottom_label.grid(row=2, column=0)
 
 	def download(self):
-		self.name = self.frm_entry_name.get()
+		self.startTime = self.frm_entry_name.get()
 		self.num = self.frm_entry_num.get()
 		self.createFrameBottom()
 		flag = 1
 		self.progress = 'Downloading...'
-		if self.name == '':
+		if self.startTime == '':
 			messagebox.showwarning('Warning', 'It seems like you didn\'t enter the start time.')
 		elif not self.num.isdigit():
 			messagebox.showwarning('Warning', 'It seems like that \'' + self.num + '\' isn\'t a good  number.')
 		elif int(self.num) == 0:
 			messagebox.showwarning('Warning', 'Nope. I think 0 threads is too few.')
 		else:
-			gui_que.put(self.name)
+			gui_que.put(self.startTime)
 			self.progress += 'please wait...'
 			self.frm_bottom_label.config(text=self.progress)
 
@@ -92,11 +92,8 @@ class Generator(threading.Thread):
 		 	messagebox.showwarning('Warning', 'You have not downloaded the resources.\nPlease download first.')
 		self.frm_bottom_label.config(text=self.progress)
 
-	def nlpProcess(self):
-		print(2)
-		if flag == 0:
-		 	messagebox.showwarning('Warning', 'You have not downloaded the resources.\nPlease download first.')
-		self.frm_bottom_label.config(text=self.progress)
+	def segment(self):
+		Segment.process('F:/news')
 
 	def run(self):
 		while True:
@@ -110,7 +107,7 @@ class Generator(threading.Thread):
 				messagebox.showerror('Error', 'Can not download. Please check internet.')
 			else:
 				messagebox.showinfo('Download Succeeded',
-									'Download ' + str(Handle.cnt - 1) + ' blogs, saved in ./news directory')
+									'Download ' + str(Handle.cnt - 1) + ' news, saved in ./news directory')
 			gui_que.task_done()
 
 def center_window(w=362, h=340):
